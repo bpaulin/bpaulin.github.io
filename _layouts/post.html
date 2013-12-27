@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
+<h2>
+    {{ page.title }}
+</h2>
+<ul class="list-inline">
+    <li>
+        <span class="label label-default">
+            {{ page.date | date: "%d/%m/%Y" }}
+        </span>
+    </li>
+    {% for category in page.categories %}
+      <li>{{ category }}</li>
+    {% endfor %}
+</ul>
 <div class="post">
 {{ content }}
 </div>
