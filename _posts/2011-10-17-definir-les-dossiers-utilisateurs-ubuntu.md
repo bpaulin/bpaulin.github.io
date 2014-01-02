@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Définir les dossiers utilisateurs
+categories: linux
 ---
 
 Ubuntu (ou gnome?) définit des dossiers qui seront assignés au bureau, à la musique, aux téléchargments, etc.

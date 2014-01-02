@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Ubuntu server 11.10 - Partie 1
+categories: linux
 ---
 Les manipulations se font sur une instal fraîche, sans les mises a jour automatique et en ayant sélectionné openssh et lamp lors de l'installation
 

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Volume du son d’un Dell Inspiron 9400 sous ubuntu
+categories: matériel linux
 ---
 
 Après l’installation d’un ubuntu tout frais sur le portable, la gestion du son est assez rock’n'roll depuis quelques versions.

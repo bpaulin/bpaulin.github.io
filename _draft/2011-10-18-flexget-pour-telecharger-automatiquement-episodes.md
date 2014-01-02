@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Utiliser FlexGet pour télécharger automatiquement les .torrents
+categories: réseau linux torrent
 ---
 
 # Les outils

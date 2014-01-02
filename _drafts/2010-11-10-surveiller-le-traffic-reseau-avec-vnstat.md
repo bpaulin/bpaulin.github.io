@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      Surveiller le trafic réseau avec vnstat
-categories: réseau linux
 ---
 
 Le débit de ma connexion s'est récemment effondré. J'ai voulu savoir si une des machines en était responsable, en monopolisant la bande passante.
