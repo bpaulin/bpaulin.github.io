@@ -11,7 +11,7 @@ Une procédure fonctionnelle pour configurer [Behat] et Symfony, de la création
 Créer un projet symfony, nommé ici _symfony-behat_
 {% highlight bash %}
 $ curl -s https://getcomposer.org/installer | php
-$ php composer.phar create-project symfony/framework-standard-edition $1 2.4.* -n
+$ php composer.phar create-project symfony/framework-standard-edition symfony-behat 2.4.* -n
 $ mv composer.phar symfony-behat/
 $ cd symfony-behat/
 {% endhighlight %}
@@ -144,6 +144,7 @@ default:
     extensions:
         Behat\Symfony2Extension\Extension:
             mink_driver: true
+            bundle: AcmeBehatBundle
         Behat\MinkExtension\Extension:
             default_session: 'symfony2'
             base_url: 'http://localhost:8000'
@@ -153,7 +154,7 @@ default:
 
 ### Test avec PhantomJS
 
-Ajouter un scénario avec le tag **@javascript**
+Ajouter un scénario avec le tag **@javascript** dans le fichier **src/Acme/BehatBundle/Features/hello.feature**
 {% highlight gherkin %}
 @javascript
 Scenario: La page hello world doit afficher hello world avec phantomjs
@@ -236,6 +237,9 @@ before_script:
 script: 
     - ./bin/behat --format=progress
 {% endhighlight %}
+
+### Liens
+Le code est disponible sur [GitHub](https://github.com/bpaulin/symfony-behat) et le build sur travis: [![Build Status](https://travis-ci.org/bpaulin/symfony-behat.png?branch=master)](https://travis-ci.org/bpaulin/symfony-behat)
 
 [Travis]: https://travis-ci.org/
 [BDD]: http://en.wikipedia.org/wiki/Behavior-driven_development
