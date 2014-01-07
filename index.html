@@ -2,14 +2,80 @@
 layout: default
 ---
 
-<div id="home">
-  <h1>Posts</h1>
-  <ul class="posts list-unstyled">
-    {% for post in site.posts %}
-      <li>
-        <span class="label label-info">{{ post.date | date: "%d/%m/%Y" }}</span>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<div class="panel panel-primary">
+  <div class="panel-heading">
+
+  <h2 class="panel-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  </div>
+  <div class="panel-body">
+    {{ post.content }}
+  </div>
+  <div class="panel-footer">
+    <ul class="list-inline text-right">
+        <!--
+        {% for category in post.categories %}
+          <li>{{ category }}</li>
+        {% endfor %}
+        -->
+        <li>
+            <span class="label label-default">
+                {{ post.date | date: "%d/%m/%Y" }}
+            </span>
+        </li>
+    </ul>
+  </div>
+
 </div>
+{% endfor %}
+
+<!-- Pagination links -->
+<ul class="pager">
+<li class="previous">
+  {% if !paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous">Précédents</a>
+  {% else %}
+    <span class="previous">Précédents</span>
+  {% endif %}
+</li>
+<li class="next">
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Suivants</a>
+  {% else %}
+    <span class="next ">Suivants</span>
+  {% endif %}
+</li>
+</ul>
+
+<!--
+<h2>
+  Derniers posts
+</h2>
+<ul class="posts list-unstyled">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% for category in site.categories %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        {{ category | first }}
+      </h2>
+    </div>
+    <ul class="posts list-group">
+      {% for post in category[1] %}
+        <li class="list-group-item">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+-->

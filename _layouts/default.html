@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-  </head>
-  <body>
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d&amp;s=16" />
+
+</head>
+<body>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,23 +23,60 @@
   ga('send', 'pageview');
   </script>
     <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <a class="navbar-brand" href="/">{{ site.name }}</a>
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="http://github.com/bpaulin/" title="Gitub"><i class="fa fa-github-alt"></i></a>
-          </li>
-          <li>
-            <a href="mailto:brunopaulin@bpaulin.net" title="Mail"><i class="fa fa-envelope"></i></a>
-          </li>
-      </nav>
-      <div id="content">
-        {{ content }}
+      <div class="page-header">
+        <h1><a href="{{ site.baseurl }}">Bruno Paulin</a></h1>
       </div>
-      <footer>
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-          <img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" />
+      <div class="row">
+          <div class="col-md-3 hidden-xs">
+            <ul class="list-unstyled">
+              <li>
+                <a href="http://github.com/bpaulin" title="Github">
+                  <i class="fa fa-github-alt"></i> 
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="http://bitbucket.org/bpaulin" title="BitBucket">
+                  <i class="fa fa-bitbucket"></i> 
+                  BitBucket
+                </a>
+              </li>
+              <li>
+                <a href="mailto:brunopaulin@bpaulin.net" title="Mail">
+                  <i class="fa fa-envelope"></i> 
+                  Mail
+                </a>
+              </li>
+            </ul>
+            <!--"Now this is not the end. It is not even the beginning of the end, but it is, perhaps, the end of the beginning." Winston Churchill - November 10, 1942-->
+            <ul class="list-unstyled">
+              <li>Humain depuis 1980</li>
+              <li>Développeur depuis 1997</li>
+              <li>Linuxien depuis 2006</li>
+              <li>Lyonnais depuis 2012</li>
+            </ul>
+          </div>
+          <div class="col-md-9">
+            {{ content }}
+          </div>
+        </div>
+      <footer class="well well-sm small">
+        Ce site est construit avec 
+        <a href="http://jekyllrb.com/">
+          jekyll
         </a>
+        , habillé avec 
+        <a href="http://getbootstrap.com/">
+        bootstrap
+        </a>
+        et versionné chez 
+        <a href="http://github.com/bpaulin">
+          GitHub
+        </a>
+        . Il est mis à disposition selon les termes de la 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          Licence Creative Commons Attribution 4.0 International
+        </a>.
       </footer>
     </div> <!-- /container -->
     <script src="https://code.jquery.com/jquery.js"></script>

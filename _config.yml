@@ -2,3 +2,5 @@ name: Bruno Paulin
 url: http://bpaulin.net
 description: 'Aide mémoire en libre service'
 pygments: true
+paginate: 5
+paginate_path: "page:num"
