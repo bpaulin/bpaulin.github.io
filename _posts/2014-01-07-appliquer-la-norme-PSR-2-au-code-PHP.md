@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Controller ses standards syntaxiques
+title:      Appliquer la norme PSR-2 au code PHP
 categories: php qualité
 ---
 
