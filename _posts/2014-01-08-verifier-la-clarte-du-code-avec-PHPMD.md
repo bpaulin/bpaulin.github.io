@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Vérifier la maintenabilité du code PHP
+title:      Vérifier la clarté du code avec PHPMD
 categories: programmation
 ---
 
