@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Afficher les articles par categories avec Jekyll
+title:      Afficher les articles par catégories avec Jekyll
 categories: jekyll
 ---
 
-Le code utilisé pour la page [article](/articles/) pour afficher les articles classés par catégories
+Le code utilisé pour la page [Articles](/articles/) pour afficher les articles classés par catégories
 
 {% highlight smarty %}
 {% raw %}
@@ -22,3 +22,4 @@ Le code utilisé pour la page [article](/articles/) pour afficher les articles c
 {% endfor %}
 {% endraw %}
 {% endhighlight %}
+
