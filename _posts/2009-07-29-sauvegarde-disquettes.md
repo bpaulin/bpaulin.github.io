@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Sauvegarde de disquettes
-categories: linux script
+categories: linux
 ---
 
 Script pour sauvegarder des disquettes sur son son disque dur

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Automatisation avec phing
-categories: behat symfony travis phing
+categories: programmation
 ---
 
 Ajouter [Phing] au dépendances de [Composer]

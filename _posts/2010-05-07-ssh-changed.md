@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      REMOTE HOST IDENTIFICATION HAS CHANGED
-categories: réseau linux
+categories: linux
 ---
 
 {% highlight sh %}

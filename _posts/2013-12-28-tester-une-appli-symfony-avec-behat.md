@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Tester une appli Symfony avec Behat
-categories: behat symfony travis
+categories: programmation
 ---
 
 Une procédure fonctionnelle pour configurer [Behat] et Symfony, de la création du projet aux premiers scénarios.

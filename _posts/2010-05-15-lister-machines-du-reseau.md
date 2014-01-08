@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Lister les machines sur son réseau
+categories: linux
 ---
 
 Quand on ne sait plus quelle ip a été attribuée à une machine, le paquet nmap peut être utile. Il n’était pas installé par défaut sur mon ubuntu. Pour l'installer, taper dans un terminal cette commande:
