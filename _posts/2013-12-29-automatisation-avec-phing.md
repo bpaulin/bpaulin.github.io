@@ -18,13 +18,11 @@ Créer à la racine du projet le fichier **build.xml** contenant par exemple pou
     <target name="test"
         depends="test:phpunit, test:behat">
     </target>
-
     <target name="test:phpunit">
         <exec command="./bin/phpunit -c app" 
             passthru="true" 
             checkreturn="true"/>
     </target>
-
     <target name="test:behat">
         <exec command="./bin/behat --format=progress" 
             passthru="true" 
