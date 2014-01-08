@@ -5,20 +5,14 @@ layout: default
 <h2>
     {{ page.title }}
 </h2>
-<ul class="list-inline">
-    <li>
-        <span class="label label-default">
-            {{ page.date | date: "%d/%m/%Y" }}
-        </span>
-    </li>
-    {% for category in page.categories %}
-      <li>{{ category }}</li>
-    {% endfor %}
-</ul>
 <div class="post">
 {{ content }}
 </div>
 
+<div class="small text-right">
+  Publié le <em>{{ page.date | date: "%d/%m/%Y" }}</em> dans la catégorie <a href="/articles/#{{ page.categories[0] }}">{{ page.categories[0] | capitalize }}</a>
+</div>
+<hr />
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'bpaulin'; 

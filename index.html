@@ -13,19 +13,10 @@ layout: default
   <div class="panel-body">
     {{ post.content }}
   </div>
-  <div class="panel-footer">
-    <ul class="list-inline text-right">
-        <!--
-        {% for category in post.categories %}
-          <li>{{ category }}</li>
-        {% endfor %}
-        -->
-        <li>
-            <span class="label label-default">
-                {{ post.date | date: "%d/%m/%Y" }}
-            </span>
-        </li>
-    </ul>
+  <div class="panel-footer text-right">
+    <small>
+      Publié le <em>{{ post.date | date: "%d/%m/%Y" }}</em> dans la catégorie <a href="/articles/#{{ post.categories[0] }}">{{ post.categories[0] | capitalize }}</a>
+    </small>
   </div>
 
 </div>

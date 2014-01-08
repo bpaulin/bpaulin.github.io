@@ -24,41 +24,53 @@
   </script>
     <div class="container">
       <div class="page-header">
-        <h1><a href="{{ site.baseurl }}">Bruno Paulin</a></h1>
+        <h1>Bruno Paulin</h1>
       </div>
-      <div class="row">
-          <div class="col-md-3 hidden-xs">
-            <ul class="list-unstyled">
-              <li>
-                <a href="http://github.com/bpaulin" title="Github">
-                  <i class="fa fa-github-alt"></i> 
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="http://bitbucket.org/bpaulin" title="BitBucket">
-                  <i class="fa fa-bitbucket"></i> 
-                  BitBucket
-                </a>
-              </li>
-              <li>
-                <a href="mailto:brunopaulin@bpaulin.net" title="Mail">
-                  <i class="fa fa-envelope"></i> 
-                  Mail
-                </a>
-              </li>
-            </ul>
-            <!--"Now this is not the end. It is not even the beginning of the end, but it is, perhaps, the end of the beginning." Winston Churchill - November 10, 1942-->
-            <ul class="list-unstyled">
-              <li>Humain depuis 1980</li>
-              <li>Développeur depuis 1997</li>
-              <li>Linuxien depuis 2006</li>
-              <li>Lyonnais depuis 2012</li>
-            </ul>
-          </div>
-          <div class="col-md-9">
-            {{ content }}
-          </div>
+        <ul class="list-inline">
+          <li>
+            <a href="{{ site.baseurl }}" title="Accueil‎">
+              <i class="fa fa-home"></i> 
+              Accueil‎
+            </a>
+          </li>
+          <li>
+            <a href="/articles/" title="Articles">
+              <i class="fa fa-list"></i> 
+              Articles
+            </a>
+          </li>
+          <!--
+          <li class="pull-right">
+            <a href="http://bitbucket.org/bpaulin" title="BitBucket">
+              <i class="fa fa-bitbucket"></i> 
+              <span class="hidden-xs">BitBucket</span> 
+            </a>
+          </li>
+          -->
+          <li class="pull-right">
+            <a href="mailto:brunopaulin@bpaulin.net" title="Mail">
+              <i class="fa fa-envelope"></i> 
+              Mail
+            </a>
+          </li>
+          <li class="pull-right">
+            <a href="http://github.com/bpaulin" title="Github">
+              <i class="fa fa-github-alt"></i> 
+              GitHub 
+            </a>
+          </li>
+        </ul><!--
+        <ul class="list-unstyled">
+          <li>Humain depuis 1980</li>
+          <li>Développeur depuis 1997</li>
+          <li>Linuxien depuis 2006</li>
+          <li>Lyonnais depuis 2012</li>
+        </ul>
+        <p>
+          "Now this is not the end. It is not even the beginning of the end, but it is, perhaps, the end of the beginning." Winston Churchill - November 10, 1942
+        </p>-->
+        <div class="content">
+          {{ content }}
         </div>
       <footer class="well well-sm small">
         Ce site est construit avec 
