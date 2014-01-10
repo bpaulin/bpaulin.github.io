@@ -1,0 +1,23 @@
+{
+  "name": "bpaulin.net",
+  "author": "Bruno Paulin",
+  "version": "0.0.0",
+  "description": "source for bpaulin.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpaulin/bpaulin.net.git"
+  },
+  "homepage": "https://github.com/bpaulin/bpaulin.net",
+  "scripts": {
+    "test": "grunt travis --verbose",
+    "build": "grunt default --verbose"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-html-validation": "~0.1.13",
+    "grunt-jekyll": "~0.4.1"
+  },
+  "scripts": {
+    "test": "grunt travis"
+  }
+}

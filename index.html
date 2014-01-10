@@ -39,34 +39,3 @@ layout: default
   {% endif %}
 </li>
 </ul>
-
-<!--
-<h2>
-  Derniers posts
-</h2>
-<ul class="posts list-unstyled">
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-{% for category in site.categories %}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2 class="panel-title">
-        {{ category | first }}
-      </h2>
-    </div>
-    <ul class="posts list-group">
-      {% for post in category[1] %}
-        <li class="list-group-item">
-          <a href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endfor %}
--->

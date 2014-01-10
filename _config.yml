@@ -4,4 +4,18 @@ description: 'Aide mémoire en libre service'
 pygments: true
 paginate: 5
 paginate_path: "page:num"
-exclude: [README, LICENSE, .gitignore, bpaulin.net.sublime-project, bpaulin.net.sublime-workspace]
+exclude: 
+    - Gruntfile.js
+    - validation.report.json
+    - validation.status.json
+    - json
+    - README
+    - LICENSE
+    - .gitignore
+    - bpaulin.net.sublime-project
+    - bpaulin.net.sublime-workspace
+    - mel.sh
+    - node_modules
+markdown: kramdown
+kramdown:
+  auto_ids: false

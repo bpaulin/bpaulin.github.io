@@ -1,3 +1,6 @@
 _site
 *.sh
 /bpaulin.net.sublime-workspace
+node_modules
+/validation-report.json
+/validation-status.json
