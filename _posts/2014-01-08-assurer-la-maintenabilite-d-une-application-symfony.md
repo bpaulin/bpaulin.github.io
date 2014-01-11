@@ -6,10 +6,11 @@ categories: programmation
 
 Une procédure fonctionnelle pour pouvoir vérifier la [Maintenabilité] d'une application symfony en une seule commande.
 Les outils utilisés:
-* [PHP_CodeSniffer] pour vérifier l'application d'une convention de nommage
-* [PHPMD] pour vérifier la clarté du code
-* [phpcpd] pour vérifier l'absence de lignes copiées\collées
-* [Phing] pour lier le tout
+
+- [PHP_CodeSniffer] pour vérifier l'application d'une convention de nommage
+- [PHPMD] pour vérifier la clarté du code
+- [phpcpd] pour vérifier l'absence de lignes copiées\collées
+- [Phing] pour lier le tout
 
 ### Installation
 
