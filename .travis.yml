@@ -4,5 +4,5 @@ node_js:
 install:
   - gem install jekyll
   - gem install kramdown
-script
+script:
   - npm test
