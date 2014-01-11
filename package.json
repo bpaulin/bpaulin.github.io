@@ -15,8 +15,7 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-html-validation": "~0.1.13",
-    "grunt-jekyll": "~0.4.1",
-    "grunt-cli": "*"
+    "grunt-jekyll": "~0.4.1"
   },
   "scripts": {
     "test": "grunt travis"
