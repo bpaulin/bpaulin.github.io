@@ -164,48 +164,50 @@
   <skillarea>
     <title>Langues</title>
     <skillset>
-      <skill level="C1 (autonome)">Anglais</skill>
+      <title>Anglais</title>
+      <skill level="10">Compréhension</skill>
+      <skill level="8">Expression</skill>
     </skillset>
   </skillarea>
   <skillarea>
     <title>Informatique</title>
     <skillset>
       <title>Base de données</title>
-      <skill>MySQL</skill>
-      <skill>SQLite</skill>
+      <skill level="8">MySQL</skill>
+      <skill level="6">SQLite</skill>
     </skillset>
     <skillset>
       <title>Framework</title>
-      <skill>Symfony 2.x</skill>
-      <skill>Zend 1.x</skill>
+      <skill level="7">Symfony 2.x</skill>
+      <skill level="4">Zend 1.x</skill>
     </skillset>
     <skillset>
       <title>Système</title>
-      <skill>Windows de 3.1 à 7</skill>
-      <skill>Linux</skill>
+      <skill level="6">Windows de 3.1 à 7</skill>
+      <skill level="8">Linux</skill>
     </skillset>
     <skillset>
       <title>Languages</title>
-      <skill>PHP 5.4</skill>
-      <skill>Javascript</skill>
-      <skill>Python</skill>
-      <skill>Shell</skill>
+      <skill level="8">PHP 5.4</skill>
+      <skill level="7">Javascript</skill>
+      <skill level="4">Python</skill>
+      <skill level="7">Shell</skill>
     </skillset>
     <skillset>
       <title>Formats</title>
-      <skill>HTML5</skill>
-      <skill>CSS/LESS</skill>
-      <skill>XML/XSLT</skill>
+      <skill level="6">HTML5</skill>
+      <skill level="6">CSS/LESS</skill>
+      <skill level="6">XML/XSLT</skill>
     </skillset>
     <skillset>
       <title>Versionning</title>
-      <skill>Git</skill>
-      <skill>Mercurial</skill>
+      <skill level="7">Git</skill>
+      <skill level="5">Mercurial</skill>
     </skillset>
     <skillset>
       <title>Behavior Driven Development</title>
-      <skill>Behat (PHP)</skill>
-      <skill>Jasmine (Javascript)</skill>
+      <skill level="9">Behat (PHP)</skill>
+      <skill level="5">Jasmine (Javascript)</skill>
     </skillset>
   </skillarea>
   <interests>
