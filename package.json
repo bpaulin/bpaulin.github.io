@@ -9,15 +9,12 @@
   },
   "homepage": "https://github.com/bpaulin/bpaulin.net",
   "scripts": {
-    "test": "grunt travis --verbose",
-    "build": "grunt default --verbose"
+    "test": "grunt travis"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-html-validation": "~0.1.13",
-    "grunt-jekyll": "~0.4.1"
-  },
-  "scripts": {
-    "test": "grunt travis"
+    "grunt-jekyll": "~0.4.1",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-html-validation": "~0.1.13"
   }
 }
