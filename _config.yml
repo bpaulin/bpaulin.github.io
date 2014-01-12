@@ -15,8 +15,6 @@ navigation:
 url: http://bpaulin.net
 description: 'Aide mémoire en libre service'
 pygments: true
-paginate: 5
-paginate_path: "articles/page:num"
 exclude: 
     - Gruntfile.js
     - validation.report.json
