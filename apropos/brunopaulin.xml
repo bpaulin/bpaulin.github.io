@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.5.1//EN"
+  "http://xmlresume.sourceforge.net/dtd/resume.dtd">
+<resume>
+  <header>
+    <name>
+      <firstname>bruno</firstname>
+      <surname>paulin</surname>
+    </name>
+    <address>
+      <street>33, rue claudius pionchon</street>
+      <postalCode>69003</postalCode>
+      <city>Lyon</city>
+      <country>France</country>
+    </address>
+    <birth>
+      <date>
+        <dayOfMonth>24</dayOfMonth>
+        <month>9</month>
+        <year>1980</year>
+      </date>
+    </birth>
+    <contact>
+      <phone>06 27 19 46 67</phone>
+      <email>brunopaulin@bpaulin.net</email>
+      <url>http://bpaulin.net</url>
+    </contact>
+  </header>
+  <history>
+    <job>
+      <jobtitle>Développeur d'applications web</jobtitle>
+      <employer>Ascomedia, Champagne au mont d'or</employer>
+      <period>
+        <from>
+          <date>
+            <year>2012</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <year>2013</year>
+          </date>
+        </to>
+      </period>
+      <projects>
+        <project>Développement spécifique d'application sur symfony en autonomie, de la conception à la mise en production</project>
+        <project>Import et traitement de données MySQL</project>
+        <project>Configuration, nettoyage et/ou sécurisation de sites sur Apache</project>
+        <project>Installation, mise à jour et développement pour CMS (joomla, wordpress, drupal, thelia, prestashop)</project>
+        <project>Développement et/ou installation de plugin jQuery</project>
+      </projects>
+      <!--<projects>
+        <project></project>
+      </projects>
+      <achievements>
+        <achievement></achievement>
+      </achievements>-->
+    </job>
+    <job>
+      <jobtitle>Maintenance et développement informatique</jobtitle>
+      <employer>Ascomedia, Auto entrepreneur, Roanne</employer>
+      <period>
+        <from>
+          <date>
+            <year>2007</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <year>2012</year>
+          </date>
+        </to>
+      </period>
+      <projects>
+        <project>Développement d'application web de gestion clientèle et commerciale</project>
+        <project>Installation de réseaux et mise en place de sauvegarde pour PME</project>
+        <project>Conseil d'achat, assemblage et installation de machines</project>
+        <project>Installation et maintenance de systèmes windows</project>
+      </projects>
+    </job>
+    <job>
+      <jobtitle>Assistant de direction</jobtitle>
+      <employer>Cafétéria Casino (Nice puis mutation à Roanne)</employer>
+      <period>
+        <from>
+          <date>
+            <year>2004</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <year>2007</year>
+          </date>
+        </to>
+      </period>
+      <projects>
+        <project>Gestion d'une équipe de 10 personnes pour des services de 300 couverts</project>
+        <project>Augmentation du plateau moyen et fidélisation de la clientèle</project>
+        <project>Mise en place d'outils pour la gestion interne du personnel</project>
+      </projects>
+    </job>
+    <job>
+      <jobtitle>Développeur d'applications</jobtitle>
+      <employer>Alpamayo (Grenoble)</employer>
+      <period>
+        <from>
+          <date>
+            <year>2001</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <year>2003</year>
+          </date>
+        </to>
+      </period>
+      <projects>
+        <project>Développement en autonomie d'un logiciel de calcul de devis prévisionnel (Visual Basic - Access)</project>
+        <project>Augmentation du plateau moyen et fidélisation de la clientèle</project>
+      </projects>
+    </job>
+    <job>
+      <jobtitle>Développeur d'applications</jobtitle>
+      <employer>Groupe Eirich France (Lyon)</employer>
+      <period>
+        <from>
+          <date>
+            <year>2001</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <year>2001</year>
+          </date>
+        </to>
+      </period>
+      <projects>
+        <project>Création d'une base de données spécifique à la société pour la gestion du catalogue et de la clientèle (Access)</project>
+      </projects>
+    </job>
+  </history>
+  <academics>
+    <degrees>
+      <degree>
+        <level>BTS</level>
+        <annotation>Cursus en alternance</annotation>
+        <major>informatique de gestion</major>
+        <minor>développeur d’applications</minor>
+        <date>
+          <year>2003</year>
+        </date>
+        <institution>Sup2i (Grenoble)</institution>
+      </degree>
+      <degree>
+        <level>Bac</level>
+        <major>scientifique</major>
+        <date>
+          <year>1999</year>
+        </date>
+        <institution>Lycée Marlioz (Aix les bains)</institution>
+      </degree>
+    </degrees>
+  </academics>
+  <skillarea>
+    <title>Langues</title>
+    <skillset>
+      <skill level="C1 (autonome)">Anglais</skill>
+    </skillset>
+  </skillarea>
+  <skillarea>
+    <title>Informatique</title>
+    <skillset>
+      <title>Base de données</title>
+      <skill>MySQL</skill>
+      <skill>SQLite</skill>
+    </skillset>
+    <skillset>
+      <title>Framework</title>
+      <skill>Symfony 2.x</skill>
+      <skill>Zend 1.x</skill>
+    </skillset>
+    <skillset>
+      <title>Système</title>
+      <skill>Windows de 3.1 à 7</skill>
+      <skill>Linux</skill>
+    </skillset>
+    <skillset>
+      <title>Languages</title>
+      <skill>PHP 5.4</skill>
+      <skill>Javascript</skill>
+      <skill>Python</skill>
+      <skill>Shell</skill>
+    </skillset>
+    <skillset>
+      <title>Formats</title>
+      <skill>HTML5</skill>
+      <skill>CSS/LESS</skill>
+      <skill>XML/XSLT</skill>
+    </skillset>
+    <skillset>
+      <title>Versionning</title>
+      <skill>Git</skill>
+      <skill>Mercurial</skill>
+    </skillset>
+    <skillset>
+      <title>Behavior Driven Development</title>
+      <skill>Behat (PHP)</skill>
+      <skill>Jasmine (Javascript)</skill>
+    </skillset>
+  </skillarea>
+  <interests>
+    <interest>
+      <title>Lecture (anglais)</title>
+    </interest>
+    <interest>
+      <title>Cuisine</title>
+    </interest>
+    <interest>
+      <title>Bricolage</title>
+    </interest>
+    <interest>
+      <title>Billard</title>
+    </interest>
+    <interest>
+      <title>Rugby</title>
+    </interest>
+  </interests>
+<!-- 
+  <misc>
+    <para></para>
+  </misc>
+
+  <lastModified>
+    <date>
+      <dayOfMonth></dayOfMonth>
+      <month></month>
+      <year></year>
+    </date>
+  </lastModified> -->
+</resume>
