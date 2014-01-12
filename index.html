@@ -1,41 +1,51 @@
 ---
 layout: default
+title: Bruno Paulin
 ---
 
-
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-<div class="panel panel-primary">
-  <div class="panel-heading">
-
-  <h2 class="panel-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  </div>
-  <div class="panel-body">
-    {{ post.content }}
-  </div>
-  <div class="panel-footer text-right">
-    <small>
-      Publié le <em>{{ post.date | date: "%d/%m/%Y" }}</em> dans la catégorie <a href="/articles/#{{ post.categories[0] }}">{{ post.categories[0] | capitalize }}</a>
-    </small>
+<div class="row">
+  <div class="col-sm-8">
+    <h2>
+      <i class="fa fa-pencil-square-o"></i> Articles
+      <br />
+      <small><a href="/articles/">Voir tous les articles</a></small>
+    </h2>
+    
+    <ul class="list-unstyled">
+    {% for post in site.posts limit:5 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
   </div>
 
+  <div class="col-sm-4">
+    <h2>
+      <i class="fa fa-question-circle"></i> A propos
+      <br />
+      <small><a href="/articles/">Détails</a></small>
+    </h2>
+    
+    <ul class="list-unstyled">
+      <li>Humain depuis 1980</li>
+      <li>Développeur depuis 1997</li>
+      <li>Linuxien depuis 2002</li>
+      <li>Lyonnais depuis 2012</li>
+    </ul>
+  </div>
 </div>
-{% endfor %}
 
-<!-- Pagination links -->
-<ul class="pager">
-<li class="previous">
-  {% if !paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous">Précédents</a>
-  {% else %}
-    <span class="previous">Précédents</span>
-  {% endif %}
-</li>
-<li class="next">
-  {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next">Suivants</a>
-  {% else %}
-    <span class="next ">Suivants</span>
-  {% endif %}
-</li>
-</ul>
+<div class="row">
+  <div class="col-md-12">
+    <h2>
+      <i class="fa fa-github-alt"></i> Projets
+      <br />
+      <small><a href="/projets/">Voir tous les projets</a></small>
+    </h2>
+    
+    <dl class="dl-horizontal">
+      <dt>Upfit</dt><dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet lectus ac ligula interdum venenatis. Ut congue lorem ut urna vehicula, quis elementum lorem cursus</dd>
+      <dt>Collection form</dt><dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet lectus ac ligula interdum venenatis. Ut congue lorem ut urna vehicula, quis elementum lorem cursus</dd>
+      <dt>Prothese</dt><dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet lectus ac ligula interdum venenatis. Ut congue lorem ut urna vehicula, quis elementum lorem cursus</dd>
+    </dl>
+  </div>
+</div>

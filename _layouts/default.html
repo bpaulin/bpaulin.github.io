@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
     <link rel="shortcut icon" href="http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d?s=16" />
@@ -22,49 +21,48 @@
   ga('send', 'pageview');
   </script>
     <div class="container">
-      <div class="page-header">
-        <h1>
-          {{ site.name }}
-        </h1>
-      </div>
-        <ul class="list-inline">
-          <li>
-            <a href="{{ site.baseurl }}" title="Accueil‎">
-              <i class="fa fa-home"></i> 
-              Accueil‎
-            </a>
-          </li>
-          <li>
-            <a href="/articles/" title="Articles">
-              <i class="fa fa-list"></i> 
-              Articles
-            </a>
-          </li>
-          <li class="pull-right">
-            <a href="mailto:brunopaulin@bpaulin.net" title="Mail">
-              <i class="fa fa-envelope"></i> 
-              Mail
-            </a>
-          </li>
-          <li class="pull-right">
-            <a href="http://github.com/bpaulin" title="Github">
-              <i class="fa fa-github-alt"></i> 
-              GitHub 
-            </a>
-          </li>
-        </ul><!--
-        <ul class="list-unstyled">
-          <li>Humain depuis 1980</li>
-          <li>Développeur depuis 1997</li>
-          <li>Linuxien depuis 2002</li>
-          <li>Lyonnais depuis 2012</li>
-        </ul>
-        <p>
-          "Now this is not the end. It is not even the beginning of the end, but it is, perhaps, the end of the beginning." Winston Churchill - November 10, 1942
-        </p>-->
-        <div class="content">
-          {{ content }}
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ site.baseurl }}">
+            Bpaulin
+          </a>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            {% assign url = page.url|remove:'/index.html' %}
+            <li {% if url == site.navigation.articles.url %}class="active"{% endif %}>
+              <a href="{{ site.navigation.articles.url }}" title="{{ site.navigation.articles.text }}">
+                <i class="fa {{ site.navigation.articles.icon }}"></i> 
+                {{ site.navigation.articles.text }}
+              </a>
+            </li>
+            <li {% if url == site.navigation.projets.url %}class="active"{% endif %}>
+              <a href="{{ site.navigation.projets.url }}" title="{{ site.navigation.projets.text }}">
+                <i class="fa {{ site.navigation.projets.icon }}"></i> 
+                {{ site.navigation.projets.text }}
+              </a>
+            </li>
+            <li {% if url == site.navigation.apropos.url %}class="active"{% endif %}>
+              <a href="{{ site.navigation.apropos.url }}" title="{{ site.navigation.apropos.text }}">
+                <i class="fa {{ site.navigation.apropos.icon }}"></i> 
+                {{ site.navigation.apropos.text }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="content">
+        <h1 class="page-header">{{ page.title }}</h1>
+        {{ content }}
+      </div>
+
       <footer class="well well-sm small">
         Ce site est construit avec 
         <a href="http://jekyllrb.com/">
