@@ -4,6 +4,8 @@ module.exports = function(grunt) {
         validation: {
             options: {
                 reset: true,
+                reportpath: false,
+
                 failHard: true,
                 relaxerror: ["Bad value X-UA-Compatible for attribute http-equiv on element meta."]
             },
@@ -13,14 +15,14 @@ module.exports = function(grunt) {
         },
 
         jekyll: {                            
-            docs: {}
+            build: {},
         },
 
-        htmlmin: {                                     // Target
-              options: {                                 // Target options
+        htmlmin: {
+            options: {
                 removeComments: true,
                 collapseWhitespace: true
-              },
+            },
             files: {
                 expand: true, 
                 src: ['**/*.html'],
@@ -28,13 +30,12 @@ module.exports = function(grunt) {
                 cwd: '_site/'
             }
         }
-
     });
 
-    grunt.loadNpmTasks("grunt-html-validation");
     grunt.loadNpmTasks("grunt-jekyll");
+    grunt.loadNpmTasks("grunt-html-validation");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-    grunt.registerTask("default", ["jekyll"]);
-    grunt.registerTask("travis", ["jekyll", "htmlmin", "validation"]);
+    grunt.registerTask("default", ["jekyll:build", "htmlmin"]);
+    grunt.registerTask("travis", ["jekyll:build", "htmlmin", "validation"]);
 };
