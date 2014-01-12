@@ -1,0 +1,1 @@
+xmllint --noout --valid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml 
