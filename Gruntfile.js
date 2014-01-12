@@ -14,13 +14,27 @@ module.exports = function(grunt) {
 
         jekyll: {                            
             docs: {}
+        },
+
+        htmlmin: {                                     // Target
+              options: {                                 // Target options
+                removeComments: true,
+                collapseWhitespace: true
+              },
+            files: {
+                expand: true, 
+                src: ['**/*.html'],
+                dest: '_site/',
+                cwd: '_site/'
+            }
         }
 
     });
 
     grunt.loadNpmTasks("grunt-html-validation");
     grunt.loadNpmTasks("grunt-jekyll");
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask("default", ["jekyll"]);
-    grunt.registerTask("travis", ["jekyll", "validation"]);
+    grunt.registerTask("travis", ["jekyll", "htmlmin", "validation"]);
 };
