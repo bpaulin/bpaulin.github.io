@@ -41,31 +41,13 @@ module.exports = function(grunt) {
                     '_includes/cv.html': ['apropos/brunopaulin.xml']
                 }
             }
-        },
-
-        watch: {
-          xslt: {
-            files: ['apropos/brunopaulin.xml','_includes/cv-html.xsl'],
-            tasks: ['xsltproc','jekyll:build'],
-            options: {
-              spawn: false,
-            },
-          },
-          jekyll: {
-            files: ['**', '!/cv/**', '!/_site'],
-            tasks: ['jekyll:build'],
-            options: {
-              spawn: false,
-            },
-          },
-        },
+        }
     });
 
     grunt.loadNpmTasks("grunt-jekyll");
     grunt.loadNpmTasks("grunt-html-validation");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-xsltproc');
+    grunt.loadTasks("./_includes/tasks");
 
     grunt.registerTask("default", ["xsltproc", "jekyll:build", "htmlmin"]);
     grunt.registerTask("travis", ["xsltproc", "jekyll:build", "htmlmin", "validation"]);
