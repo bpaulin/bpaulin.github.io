@@ -5,7 +5,6 @@ module.exports = function(grunt) {
             options: {
                 reset: true,
                 reportpath: false,
-
                 failHard: true,
                 relaxerror: ["Bad value X-UA-Compatible for attribute http-equiv on element meta."]
             },
@@ -15,7 +14,11 @@ module.exports = function(grunt) {
         },
 
         jekyll: {                            
-            build: {},
+            build: {
+                options: {
+                    src: 'jekyll'
+                }
+            },
         },
 
         htmlmin: {
@@ -33,12 +36,12 @@ module.exports = function(grunt) {
 
         xsltproc: {
             options: {
-                stylesheet: '_includes/cv-html.xsl',
+                stylesheet: 'cv/cv-html.xsl',
                 novalid: true
             },
             compile: {
                 files: {
-                    '_includes/cv.html': ['apropos/brunopaulin.xml']
+                    'jekyll/_includes/cv.html': ['cv/brunopaulin.xml']
                 }
             }
         }
