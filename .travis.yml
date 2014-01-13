@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - 0.10
 install:
+  - sudo apt-get -y install xsltproc
   - gem install jekyll kramdown
   - npm install -g grunt-cli
   - npm install
