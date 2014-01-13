@@ -8,15 +8,20 @@ module.exports = function(grunt) {
                 failHard: true,
                 relaxerror: ["Bad value X-UA-Compatible for attribute http-equiv on element meta."]
             },
-            files: {
-                src: ['_site/**/*.html']
-            }
+            src: ['_site/**/*.html']
         },
 
         jekyll: {                            
             build: {
                 options: {
                     src: 'jekyll'
+                }
+            },                           
+            serve: {
+                options: {
+                    src: 'jekyll',
+                    watch: true,
+                    serve: true,
                 }
             },
         },
@@ -44,6 +49,20 @@ module.exports = function(grunt) {
                     'jekyll/_includes/cv.html': ['cv/brunopaulin.xml']
                 }
             }
+        },
+
+        watch: {
+            xsltproc: {
+                files: 'cv/*.*',
+                tasks: ['xsltproc']
+            }
+        },
+
+        concurrent: {
+            dev: ['watch', 'jekyll:serve'],
+            options: {
+                logConcurrentOutput: true
+            }
         }
     });
 
@@ -51,7 +70,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-html-validation");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-xsltproc');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-concurrent');
 
     grunt.registerTask("default", ["xsltproc", "jekyll:build", "htmlmin"]);
+    grunt.registerTask("dev", ["concurrent:dev"]);
     grunt.registerTask("travis", ["xsltproc", "jekyll:build", "htmlmin", "validation"]);
 };
