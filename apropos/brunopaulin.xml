@@ -4,8 +4,8 @@
 <resume>
   <header>
     <name>
-      <firstname>bruno</firstname>
-      <surname>paulin</surname>
+      <firstname>Bruno</firstname>
+      <surname>Paulin</surname>
     </name>
     <address>
       <street>33, rue claudius pionchon</street>
@@ -58,7 +58,7 @@
     </job>
     <job>
       <jobtitle>Maintenance et développement informatique</jobtitle>
-      <employer>Ascomedia, Auto entrepreneur, Roanne</employer>
+      <employer>Auto entrepreneur, Roanne</employer>
       <period>
         <from>
           <date>

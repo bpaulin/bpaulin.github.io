@@ -1,21 +1,43 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html" omit-xml-declaration="yes" encoding="utf-8" indent="yes" media-type="text/html" />
+<xsl:output method="html" omit-xml-declaration="yes" encoding="utf-8" indent="yes" media-type="text/html" />
 <xsl:template match="/">
 <div class="hresume">
   <address class="vcard">
-    <span class="fn">
-      <xsl:value-of select="resume/header/name/firstname"/>
-      <xsl:value-of select="resume/header/name/surname"/>
-    </span>
-    <span class="adr">
-      <span class="street-address"><xsl:value-of select="resume/header/address/street"/></span>
-      <span class="locality"><xsl:value-of select="resume/header/address/city"/></span>, 
-      <span class="postal-code"><xsl:value-of select="resume/header/address/postalCode"/></span>
-      <span class="country-name"><xsl:value-of select="resume/header/address/country"/></span>
-    </span>
-    Email: <span class="email"><xsl:value-of select="resume/header/contact/email"/></span>
-    Homepage: <span class="url"><xsl:value-of select="resume/header/contact/url"/></span>
-    Phone: <span class="tel"><xsl:value-of select="resume/header/contact/phone"/></span>
+    <div class="fn">
+      <xsl:value-of select="resume/header/name/firstname"/>&#160;<xsl:value-of select="resume/header/name/surname"/>
+    </div>
+    <ul class="adr list-unstyled">
+      <li>
+        <span class="street-address"><xsl:value-of select="resume/header/address/street"/></span>
+      </li>
+      <li>
+        <span class="postal-code"><xsl:value-of select="resume/header/address/postalCode"/></span>&#160;<span class="locality"><xsl:value-of select="resume/header/address/city"/></span>
+      </li>
+      <li>
+        <span class="country-name"><xsl:value-of select="resume/header/address/country"/></span>
+      </li>
+    </ul>
+    <ul class="list-unstyled">
+      <li>
+        <a class="email">
+            <xsl:attribute name="href">
+              mailto:<xsl:value-of select="resume/header/contact/email" />
+            </xsl:attribute>
+          <xsl:value-of select="resume/header/contact/email"/>
+        </a>
+      </li>
+      <li>
+        <a class="url">
+            <xsl:attribute name="href">
+              <xsl:value-of select="resume/header/contact/url" />
+            </xsl:attribute>
+          <xsl:value-of select="resume/header/contact/url"/>
+        </a>
+      </li>
+      <li>
+        <span class="tel"><xsl:value-of select="resume/header/contact/phone"/></span>
+      </li>
+    </ul>
   </address>
   <h2>
     Parcours professionnel
@@ -28,15 +50,16 @@
             <span class="label label-info">
               <xsl:value-of select="period/from/date/year"/>
               -
-              <xsl:value-of select="period/to/date/year"/> 
+              <xsl:value-of select="period/to/date/year"/>
+
             </span> 
             <span>
               <xsl:value-of select="jobtitle"/> 
             </span>
-            <span class="small">
-              <xsl:value-of select="employer"/>
-            </span>
           </h3>
+          <strong>
+            <xsl:value-of select="employer"/>
+          </strong>
         </header>
         <ul class="list-unstyled">
           <xsl:for-each select="projects/project">
