@@ -55,6 +55,10 @@ module.exports = function(grunt) {
             xsltproc: {
                 files: 'cv/*.*',
                 tasks: ['xsltproc']
+            },
+            less: {
+                files: 'style/bpaulin.less',
+                tasks: ['less']
             }
         },
 
@@ -62,6 +66,17 @@ module.exports = function(grunt) {
             dev: ['watch', 'jekyll:serve'],
             options: {
                 logConcurrentOutput: true
+            }
+        },
+
+        less: {
+            site: {
+                files: {
+                    "jekyll/css/bpaulin.css": "style/bpaulin.less"
+                },
+                options: {
+                    cleancss: true
+                }
             }
         }
     });
@@ -72,6 +87,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-xsltproc');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     grunt.registerTask("default", ["xsltproc", "jekyll:build", "htmlmin"]);
     grunt.registerTask("dev", ["concurrent:dev"]);
