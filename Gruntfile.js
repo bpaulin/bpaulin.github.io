@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-jekyll");
     grunt.loadNpmTasks("grunt-html-validation");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadTasks("./_includes/tasks");
+    grunt.loadNpmTasks('grunt-xsltproc');
 
     grunt.registerTask("default", ["xsltproc", "jekyll:build", "htmlmin"]);
     grunt.registerTask("travis", ["xsltproc", "jekyll:build", "htmlmin", "validation"]);
