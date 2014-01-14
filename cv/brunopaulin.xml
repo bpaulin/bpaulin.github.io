@@ -8,7 +8,7 @@
       <surname>Paulin</surname>
     </name>
     <address>
-      <street>33, rue claudius pionchon</street>
+      <street>33, rue Claudius Pionchon</street>
       <postalCode>69003</postalCode>
       <city>Lyon</city>
       <country>France</country>
@@ -24,6 +24,7 @@
       <phone>06 27 19 46 67</phone>
       <email>brunopaulin@bpaulin.net</email>
       <url>http://bpaulin.net</url>
+      <url>https://github.com/bpaulin</url>
     </contact>
   </header>
   <history>
@@ -49,12 +50,9 @@
         <project>Installation, mise à jour et développement pour CMS (joomla, wordpress, drupal, thelia, prestashop)</project>
         <project>Développement et/ou installation de plugin jQuery</project>
       </projects>
-      <!--<projects>
-        <project></project>
-      </projects>
       <achievements>
-        <achievement></achievement>
-      </achievements>-->
+        <achievement>Mise en place du versionning (bitbucket)</achievement>
+      </achievements>
     </job>
     <job>
       <jobtitle>Maintenance et développement informatique</jobtitle>
@@ -227,10 +225,18 @@
       <title>Rugby</title>
     </interest>
   </interests>
-<!-- 
   <misc>
-    <para></para>
+    <para>Développeur d'applications Symfony</para>
+    <para>9 années d’expérience dans l'informatique</para>
   </misc>
+  <keywords>
+    <keyword>Développeur d'applications</keyword>
+    <keyword>Applications de gestion</keyword>
+    <keyword>Bases de données</keyword>
+    <keyword>Symfony</keyword>
+    <keyword>Intégration continue</keyword>
+  </keywords>
+<!-- 
 
   <lastModified>
     <date>
