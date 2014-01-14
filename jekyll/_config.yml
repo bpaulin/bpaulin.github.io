@@ -1,15 +1,15 @@
 name: Bruno Paulin
 navigation:
     articles:
-        url: /articles
+        url: /articles/
         text: Articles
         icon: fa-pencil-square-o
     projets:
-        url: /projets
+        url: /projets/
         text: Projets
         icon: fa-github-alt
     apropos:
-        url: /apropos
+        url: /apropos/
         text: A propos
         icon: fa-question-circle
 url: http://bpaulin.net
