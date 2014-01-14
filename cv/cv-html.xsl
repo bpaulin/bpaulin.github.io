@@ -127,7 +127,7 @@
               </li> 
             </xsl:for-each>
           </ul>
-          <ul class="fa-ul">
+          <ul class="fa-ul projects">
             <xsl:for-each select="projects/project">
               <li>
                 <i class="fa-li fa fa-chevron-circle-right"></i>
