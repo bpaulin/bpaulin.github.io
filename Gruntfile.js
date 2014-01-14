@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 options: {
                     src: 'jekyll',
                     watch: true,
-                    serve: true,
+                    serve: true
                 }
             },
         },
