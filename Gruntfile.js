@@ -53,8 +53,12 @@ module.exports = function(grunt) {
 
         watch: {
             xsltproc: {
-                files: 'cv/*.*',
+                files: ['cv/brunopaulin.xml','cv/cv-html.xsl'],
                 tasks: ['xsltproc']
+            },
+            pdf: {
+                files: ['cv/brunopaulin.xml','cv/cv-pdf.xsl'],
+                tasks: ['shell:pdf']
             },
             less: {
                 files: 'style/bpaulin.less',
@@ -78,6 +82,17 @@ module.exports = function(grunt) {
                     cleancss: true
                 }
             }
+        },
+
+        shell: {                    
+            pdf: {        
+                options: {             
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                },
+                command: 'fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf'
+            }
         }
     });
 
@@ -88,8 +103,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask("default", ["xsltproc", "jekyll:build", "htmlmin"]);
+    grunt.registerTask("default", ["xsltproc", "shell:pdf", "jekyll:build", "htmlmin"]);
     grunt.registerTask("dev", ["concurrent:dev"]);
-    grunt.registerTask("travis", ["xsltproc", "jekyll:build", "htmlmin", "validation"]);
+    grunt.registerTask("travis", ["xsltproc", "shell:pdf", "jekyll:build", "htmlmin", "validation"]);
 };

@@ -1,5 +1,6 @@
 _site
 *.sh
+*.pdf
 /bpaulin.net.sublime-workspace
 node_modules
 /validation-report.json
