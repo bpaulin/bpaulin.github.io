@@ -1,0 +1,43 @@
+---
+layout: default
+title: Bruno Paulin
+---
+
+<div class="row">
+  <div class="col-sm-8">
+    <h2>
+      <i class="fa fa-pencil-square-o"></i> Articles
+      <br />
+      <small><a href="/articles/">Voir tous les articles</a></small>
+    </h2>
+    
+    <ul class="list-unstyled">
+    {% for post in site.posts limit:10 %}
+      <li>
+        <span class="label label-info">{{ post.date | date: "%d/%m/%Y" }}</span>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="col-sm-4">
+    <h2>
+      <i class="fa fa-question-circle"></i> A propos
+      <br />
+      <small><a href="/apropos/">Détails</a></small>
+    </h2>
+    {% include apropos.html %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>
+      <i class="fa fa-github-alt"></i> Projets
+      <br />
+      <small><a href="/projets/">Voir tous les projets</a></small>
+    </h2>
+    {% include projets.html %}
+  </div>
+</div>

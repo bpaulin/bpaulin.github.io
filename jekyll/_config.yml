@@ -1,9 +1,20 @@
 name: Bruno Paulin
+navigation:
+    articles:
+        url: /articles/
+        text: Articles
+        icon: fa-pencil-square-o
+    projets:
+        url: /projets/
+        text: Projets
+        icon: fa-github-alt
+    apropos:
+        url: /apropos/
+        text: A propos
+        icon: fa-question-circle
 url: http://bpaulin.net
 description: 'Aide mémoire en libre service'
 pygments: true
-paginate: 5
-paginate_path: "page:num"
 exclude: 
     - Gruntfile.js
     - validation.report.json
@@ -19,3 +30,4 @@ exclude:
 markdown: kramdown
 kramdown:
   auto_ids: false
+permalink: /articles/:categories/:year/:month/:day/:title/

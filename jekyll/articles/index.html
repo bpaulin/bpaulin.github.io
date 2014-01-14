@@ -5,13 +5,14 @@ title: Articles
 
 {% for category in site.categories %}
     <h2 id="{{ category | first }}">{{ category | first | capitalize }}</h2>
-    {% for post in category[1] %}
-        <ul class="list-unstyled">
+    <ul class="list-unstyled">
+        {% for post in category[1] %}
             <li>
+                <span class="label label-info">{{ post.date | date: "%d/%m/%Y" }}</span>
                 <a href="{{ post.url }}">
                     {{ post.title }}
                 </a>
             </li>
-        </ul>
-    {% endfor %}
+        {% endfor %}
+    </ul>
 {% endfor %}
