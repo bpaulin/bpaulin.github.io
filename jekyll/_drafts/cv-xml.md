@@ -1,1 +1,0 @@
-http://xmlresume.sourceforge.net/
