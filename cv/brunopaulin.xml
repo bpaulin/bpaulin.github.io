@@ -22,8 +22,8 @@
     <contact>
       <phone>06 27 19 46 67</phone>
       <email>brunopaulin@bpaulin.net</email>
-      <url>http://bpaulin.net</url>
-      <url>https://github.com/bpaulin</url>
+      <url>bpaulin.net</url>
+      <url>github.com/bpaulin</url>
     </contact>
   </header>
   <history>
@@ -47,7 +47,7 @@
         <project>Import et traitement de données MySQL</project>
         <project>Configuration, nettoyage et/ou sécurisation de sites sur Apache</project>
         <project>Installation, mise à jour et développement pour CMS (joomla, wordpress, drupal, thelia, prestashop)</project>
-        <project>Développement et/ou installation de plugin jQuery</project>
+        <project>Développement et installation de plugin jQuery</project>
       </projects>
       <achievements>
         <achievement>Mise en place du versionning (bitbucket)</achievement>
@@ -76,7 +76,7 @@
       </projects>
       <achievements>
         <achievement>Développement d'application web de gestion clientèle et commerciale toujours en production</achievement>
-        <achievement>Installation/Configuration de serveur linux (LAMP,ssh,rsync)</achievement>
+        <achievement>Installation/Configuration de serveur linux (LAMP, ssh, rsync)</achievement>
       </achievements>
     </job>
     <job>
