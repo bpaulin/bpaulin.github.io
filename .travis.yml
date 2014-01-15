@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 0.10
 install:
-  - sudo apt-get -y install xsltproc xmllint
+  - sudo apt-get -y install xsltproc libxml-utils
   - bundle install
   - npm install -g grunt-cli
   - npm install
