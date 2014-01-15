@@ -56,6 +56,10 @@ module.exports = function(grunt) {
                 files: ['cv/brunopaulin.xml','cv/cv-html.xsl'],
                 tasks: ['xsltproc']
             },
+            xmllint: {
+                files: ['cv/brunopaulin.xml'],
+                tasks: ['shell:xmllint']
+            },
             pdf: {
                 files: ['cv/brunopaulin.xml','cv/cv-pdf.xsl'],
                 tasks: ['shell:pdf']
@@ -92,6 +96,14 @@ module.exports = function(grunt) {
                     failOnError: true
                 },
                 command: 'fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf'
+            },              
+            xmllint: {        
+                options: {             
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                },
+                command: 'xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml'
             }
         }
     });
@@ -105,7 +117,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask("default", ["xsltproc", "shell:pdf", "jekyll:build", "htmlmin"]);
+    grunt.registerTask("default", ["shell:xmllint", "xsltproc", "shell:pdf", "jekyll:build", "htmlmin"]);
     grunt.registerTask("dev", ["concurrent:dev"]);
-    grunt.registerTask("travis", ["xsltproc", "shell:pdf", "jekyll:build", "htmlmin", "validation"]);
+    grunt.registerTask("travis", ["shell:xmllint", "xsltproc", "jekyll:build", "htmlmin", "validation"]);
 };

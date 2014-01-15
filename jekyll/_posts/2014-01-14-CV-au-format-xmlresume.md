@@ -39,7 +39,7 @@ La [documentation] de XMLRésumé est extrêmement claire. Le [DTD] du XML est p
 Pour valider le xml:
 
 {% highlight bash %}
-$ xmllint --noout --valid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd /chemin/du/cv.xml 
+$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd /chemin/du/cv.xml 
 {% endhighlight %}
 
 Pour générer le html:

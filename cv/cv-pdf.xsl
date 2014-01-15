@@ -69,6 +69,7 @@
           </fo:block-container><!--keywords-->  
 
           <fo:block-container  position="absolute" top="5cm">
+            <fo:block></fo:block>
             <fo:block-container position="absolute" left="0cm" width="4cm" >
               <fo:block background-color="#DDDDDD" padding="5px"><!--skills-->      
                 <xsl:for-each select="resume/skillarea">
@@ -161,7 +162,8 @@
               <fo:block font-size="18" font-weight="bold" margin-left="10px" margin-bottom="5px">
                 <xsl:text>Formation</xsl:text> 
               </fo:block>
-              <fo:block-container>       
+              <fo:block-container>
+              <fo:block></fo:block>       
                 <xsl:for-each select="resume/academics/degrees/degree">
                   <fo:block-container position="absolute" background-color="#EEEEEE" padding="5px">
                     <xsl:attribute name="left">
