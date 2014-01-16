@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Paulin;Bruno;
+FN:Bruno Paulin
+ADR;TYPE=HOME:;;33, rue Claudius Pionchon;Lyon;;69003;France;
+LABEL;TYPE=HOME:33, rue Claudius Pionchon\n69003 Lyon\nFrance
+TEL;TYPE=CELL:06 27 19 46 67
+EMAIL;TYPE=HOME:brunopaulin@bpaulin.net
+URL:http://bpaulin.net
+BDAY:1980-09-24
+PHOTO;VALUE=uri:http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d
+END:VCARD

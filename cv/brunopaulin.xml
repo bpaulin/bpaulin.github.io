@@ -14,15 +14,15 @@
     <birth>
       <date>
         <dayOfMonth>24</dayOfMonth>
-        <month>9</month>
+        <month>09</month>
         <year>1980</year>
       </date>
     </birth>
     <contact>
       <phone>06 27 19 46 67</phone>
       <email>brunopaulin@bpaulin.net</email>
-      <url>bpaulin.net</url>
-      <url>github.com/bpaulin</url>
+      <url>http://bpaulin.net</url>
+      <url>http://github.com/bpaulin</url>
     </contact>
   </header>
   <history>

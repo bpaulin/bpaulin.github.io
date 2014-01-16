@@ -40,21 +40,34 @@ module.exports = function(grunt) {
         },
 
         xsltproc: {
-            options: {
-                stylesheet: 'cv/cv-html.xsl',
-                novalid: true
-            },
-            compile: {
+            html: {
+                options: {
+                    stylesheet: 'cv/cv-html.xsl',
+                    novalid: true
+                },
                 files: {
                     'jekyll/_includes/cv.html': ['cv/brunopaulin.xml']
+                }
+            },
+            vcf: {
+                options: {
+                    stylesheet: 'cv/cv-vcf.xsl',
+                    novalid: true
+                },
+                files: {
+                    'jekyll/apropos/brunopaulin.vcf': ['cv/brunopaulin.xml']
                 }
             }
         },
 
         watch: {
-            xsltproc: {
+            xsltproc_html: {
                 files: ['cv/brunopaulin.xml','cv/cv-html.xsl'],
-                tasks: ['xsltproc']
+                tasks: ['xsltproc:html']
+            },
+            xsltproc_vcf: {
+                files: ['cv/brunopaulin.xml','cv/cv-vcf.xsl'],
+                tasks: ['xsltproc:vcf']
             },
             xmllint: {
                 files: ['cv/brunopaulin.xml'],
