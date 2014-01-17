@@ -166,7 +166,7 @@
   <skillarea>
     <title>Langues</title>
     <skillset>
-      <title>Anglais</title>
+      <title>Anglais courant</title>
       <skill level="10">Compréhension</skill>
       <skill level="8">Expression</skill>
     </skillset>
@@ -242,7 +242,7 @@
   </keywords>
   <lastModified>
     <date>
-      <dayOfMonth>14</dayOfMonth>
+      <dayOfMonth>17</dayOfMonth>
       <month>Jan</month>
       <year>2014</year>
     </date>
