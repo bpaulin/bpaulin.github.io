@@ -34,28 +34,51 @@ La [documentation] de XMLRésumé est extrêmement claire. Le [DTD] du XML est p
 
 **Dans le doute, utiliser la solution la plus simple.** Ca sera donc [XMLRésuméLibrary] en attendant l'éventuel besoin d'[Europass]
 
-## Outil et commande
+## Les outils
 
-Pour valider le xml:
+* [xmllint]  (installé par le paquet [libxml2-utils](apt://libxml2-utils)) valide le xml source. 
+* [xsltproc]  (installé par le paquet [xsltproc](apt://xsltproc)) réalise la transformation en html et vcard. 
+* [Apache FOP]  (installé par le paquet [fop](apt://fop)) réalise la transformation en pdf.
+
+## Les commandes
+
+Valider le xml:
 
 {% highlight bash %}
-$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd /chemin/du/cv.xml 
+$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml 
 {% endhighlight %}
 
-Pour générer le html:
+Générer le html:
 
 {% highlight bash %}
-$ xsltproc --novalid -o /chemin/du/fichier.html /chemin/du/fichier.xsl /chemin/du/cv.xml 
+$ xsltproc --novalid -o jekyll/_includes/cv.html cv/cv-html.xsl cv/brunopaulin.xml 
 {% endhighlight %}
 
-j'utilise [grunt-xsltproc] pour la génération
+Générer la vcard:
+
+{% highlight bash %}
+$ xsltproc --novalid -o jekyll/apropos/brunopaulin.vcf cv/cv-vcf.xsl cv/brunopaulin.xml 
+{% endhighlight %}
+
+Générer le pdf:
+
+{% highlight bash %}
+$ fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf
+{% endhighlight %}
+
 
 ## Le résultat
 
-Une feuille de style ([visible ici](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-html.xsl)) transforme mon cv au format xml ([visible ici](https://github.com/bpaulin/bpaulin.net/blob/master/cv/brunopaulin.xml)) pour générer après chaque modification la page [A propos](/apropos/)
+* le [fichier pdf](/apropos/brunopaulin.pdf) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-pdf.xsl)
+* la [vcard](/apropos/brunopaulin.vcf) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-vcf.xsl)
+* la [page html](/apropos/) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-html.xsl)
 
 [grunt-xsltproc]: https://npmjs.org/package/grunt-xsltproc
 [XMLRésuméLibrary]: http://xmlresume.sourceforge.net/
 [documentation]: http://xmlresume.sourceforge.net/user-guide/index.html
 [DTD]: http://xmlresume.sourceforge.net/dtd/resume.dtd
 [Europass]: http://interop.europass.cedefop.europa.eu/data-model/xml-resources/
+[xmllint]: http://xmlsoft.org/xmllint.html
+[libxml2-utils]: apt://libxml2-utils
+[xsltproc]: http://xmlsoft.org/XSLT/xsltproc.html
+[Apache FOP]: http://xmlgraphics.apache.org/fop/
