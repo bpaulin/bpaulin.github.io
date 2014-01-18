@@ -9,6 +9,7 @@ Une procédure fonctionnelle pour configurer [Behat] et Symfony, de la création
 ### Création du projet symfony
 
 Créer un projet symfony, nommé ici _symfony-behat_
+
 {% highlight bash %}
 $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar create-project symfony/framework-standard-edition symfony-behat 2.4.* -n
