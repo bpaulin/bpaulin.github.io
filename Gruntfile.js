@@ -11,12 +11,12 @@ module.exports = function(grunt) {
             src: ['_site/**/*.html']
         },
 
-        jekyll: {                            
+        jekyll: {
             build: {
                 options: {
                     src: 'jekyll'
                 }
-            },                           
+            },
             serve: {
                 options: {
                     src: 'jekyll',
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                 collapseWhitespace: true
             },
             files: {
-                expand: true, 
+                expand: true,
                 src: ['**/*.html'],
                 dest: '_site/',
                 cwd: '_site/'
@@ -101,17 +101,25 @@ module.exports = function(grunt) {
             }
         },
 
-        shell: {                    
-            pdf: {        
-                options: {             
+        shell: {
+            pdf: {
+                options: {
                     stdout: true,
                     stderr: true,
                     failOnError: true
                 },
                 command: 'fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf'
-            },              
-            xmllint: {        
-                options: {             
+            },
+            pdfanonyme: {
+                options: {
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                },
+                command: 'fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf-anonyme.xsl -pdf jekyll/apropos/brunopaulin-anonyme.pdf'
+            },
+            xmllint: {
+                options: {
                     stdout: true,
                     stderr: true,
                     failOnError: true
@@ -130,7 +138,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask("default", ["shell:xmllint", "xsltproc", "shell:pdf", "jekyll:build", "htmlmin"]);
+    grunt.registerTask("default", ["shell:xmllint", "xsltproc", "shell:pdf", "shell:pdfanonyme", "jekyll:build", "htmlmin"]);
     grunt.registerTask("dev", ["concurrent:dev"]);
     grunt.registerTask("travis", ["shell:xmllint", "xsltproc", "jekyll:build", "htmlmin", "validation"]);
 };
