@@ -14,7 +14,7 @@ navigation:
         icon: fa-question-circle
 url: http://bpaulin.net
 description: 'Aide mémoire en libre service'
-pygments: true
+highlighter: true
 exclude: 
     - Gruntfile.js
     - validation.report.json
