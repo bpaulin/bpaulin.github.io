@@ -7,3 +7,5 @@ node_modules
 /validation-status.json
 /Gemfile.lock
 .idea/
+/jekyll/.jekyll-metadata
+/jekyll/_includes/cv.html
