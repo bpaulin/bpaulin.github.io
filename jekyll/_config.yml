@@ -31,3 +31,5 @@ markdown: kramdown
 kramdown:
   auto_ids: false
 permalink: /articles/:categories/:year/:month/:day/:title/
+gems:
+   - jekyll-gist
