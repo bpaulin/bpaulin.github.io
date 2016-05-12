@@ -25,7 +25,8 @@ highlighter: true
 exclude: 
     - Gruntfile.js
     - validation.report.json
-    - validation.status.json
+    - validation-status.json
+    - package.json
     - json
     - README
     - LICENSE

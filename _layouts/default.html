@@ -52,12 +52,12 @@
           <p class="pull-right lang-selector">
             {% for post in posts %}
               <a href="{{ post.url }}">
-                <img src="/img/{{ site.flags[post.lang] }}.svg" alt="{{ site.flags[post.lang] }}">
+                <img src="/img/{{ site.flags[post.lang] }}.svg" alt="{{ post.lang }}">
               </a>
             {% endfor %}
             {% for page in pages %}
               <a href="{{ page.url }}">
-                <img src="/img/{{ site.flags[page.lang] }}.svg" alt="{{ site.flags[page.lang] }}">
+                <img src="/img/{{ site.flags[page.lang] }}.svg" alt="{{ page.lang }}">
               </a>
             {% endfor %}
           </p>
