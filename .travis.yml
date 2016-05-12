@@ -4,8 +4,6 @@ node_js:
   - 0.10
 
 install:
-  - sudo apt-get update
-  - sudo apt-get -y install xsltproc libxml2-utils
   - bundle install
   - npm install -g grunt-cli
   - npm install
