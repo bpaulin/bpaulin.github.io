@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="/css/bpaulin.css">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
     <link rel="shortcut icon" href="http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d?s=16" />
@@ -52,10 +51,14 @@
           {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
           <p class="pull-right lang-selector">
             {% for post in posts %}
-              <a href="{{ post.url }}"><span class="flag-icon flag-icon-{{ site.flags[post.lang] }}"></span></a>
+              <a href="{{ post.url }}">
+                <img src="/img/{{ site.flags[post.lang] }}.svg" alt="{{ site.flags[post.lang] }}">
+              </a>
             {% endfor %}
             {% for page in pages %}
-              <a href="{{ page.url }}"><span class="flag-icon flag-icon-{{ site.flags[page.lang] }}"></span></a>
+              <a href="{{ page.url }}">
+                <img src="/img/{{ site.flags[page.lang] }}.svg" alt="{{ site.flags[page.lang] }}">
+              </a>
             {% endfor %}
           </p>
         {% endif %}

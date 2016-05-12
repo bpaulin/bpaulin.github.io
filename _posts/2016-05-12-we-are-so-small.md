@@ -9,4 +9,4 @@ This script allows me a few seconds of day dreaming every now and then. A single
 
 It displays how far we are from the sun, and how fast the earth is currently moving around it.
 
-{% gist bpaulin/64274c05c0f041fa %}
+{% gist bpaulin/6c3e64274c05c0f041fa %}
