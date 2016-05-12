@@ -1,11 +1,4 @@
 _site
-*.sh
-*.pdf
-/bpaulin.net.sublime-workspace
 node_modules
-/validation-report.json
-/validation-status.json
 /Gemfile.lock
 .idea/
-/jekyll/.jekyll-metadata
-/jekyll/_includes/cv.html

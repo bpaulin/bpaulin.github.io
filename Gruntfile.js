@@ -14,12 +14,12 @@ module.exports = function(grunt) {
         jekyll: {
             build: {
                 options: {
-                    src: 'jekyll'
+                    src: '.'
                 }
             },
             serve: {
                 options: {
-                    src: 'jekyll',
+                    src: '.',
                     watch: true,
                     serve: true
                 }
