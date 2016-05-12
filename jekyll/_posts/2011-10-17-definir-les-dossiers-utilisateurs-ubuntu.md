@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Définir les dossiers utilisateurs
+lang: fr
 categories: linux
 ---
 

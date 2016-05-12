@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Lister les machines sur son réseau
+lang: fr
 categories: linux
 ---
 

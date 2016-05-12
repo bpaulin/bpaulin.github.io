@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Documentation offline pour symfony
+lang: fr
 categories: programmation
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Souris Mad Catz R.A.T.5 sous linux
+lang: fr
 categories: linux
 ---
 

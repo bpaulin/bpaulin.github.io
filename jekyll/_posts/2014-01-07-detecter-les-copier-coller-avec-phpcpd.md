@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Détecter les copier/coller avec phpcpd
+lang: fr
 categories: programmation
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Surveiller le trafic réseau avec vnstat
+lang: fr
 categories: linux
 ---
 

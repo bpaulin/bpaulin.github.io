@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Volume du son d’un Dell Inspiron 9400 sous ubuntu
+lang: fr
 categories: linux
 ---
 

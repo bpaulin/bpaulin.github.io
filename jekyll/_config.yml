@@ -1,18 +1,25 @@
-name: Bruno Paulin
-navigation:
-    articles:
-        url: /articles/
-        text: Articles
-        icon: fa-pencil-square-o
-    projets:
-        url: /projets/
-        text: Projets
-        icon: fa-github-alt
-    apropos:
-        url: /apropos/
-        text: A propos
-        icon: fa-question-circle
+name: BPaulin
+flags:
+  en: gb
+  fr: fr
+t:
+  en:
+    posts:
+      label: "Posts"
+      url: "/en/"
+    about:
+      label: "About"
+      url: "/about/"
+  fr:
+    posts:
+      label: "Articles"
+      url: "/"
+    about:
+      label: "A propos"
+      url: "/apropos/"
 url: http://bpaulin.net
+github: http://gitub.com/bpaulin
+linkedin: http://linkedin
 description: 'Aide mémoire en libre service'
 highlighter: true
 exclude: 

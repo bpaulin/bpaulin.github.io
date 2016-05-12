@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Assurer la maintenabilité d'une application symfony
+lang: fr
 categories: programmation
 ---
 

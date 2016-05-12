@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Afficher les articles par catégories avec Jekyll
+lang: fr
 categories: jekyll
 ---
 

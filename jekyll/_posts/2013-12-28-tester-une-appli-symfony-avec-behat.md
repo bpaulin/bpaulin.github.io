@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Tester une appli Symfony avec Behat
+lang: fr
 categories: programmation
 ---
 

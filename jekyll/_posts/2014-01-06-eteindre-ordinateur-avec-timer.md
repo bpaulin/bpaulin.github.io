@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Eteindre l'ordinateur avec un timer
+lang: fr
 categories: linux
 ---
 

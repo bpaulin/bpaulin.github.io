@@ -11,8 +11,9 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/syntax.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="/css/bpaulin.css">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
     <link rel="shortcut icon" href="http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d?s=16" />
@@ -26,71 +27,46 @@
   ga('create', 'UA-46867580-1', 'bpaulin.net');
   ga('send', 'pageview');
   </script>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{ site.baseurl }}">
-            Bpaulin
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            {% assign url = page.url|remove:'/index.html' %}
-            <li {% if url == site.navigation.articles.url %}class="active"{% endif %}>
-              <a href="{{ site.navigation.articles.url }}" title="{{ site.navigation.articles.text }}">
-                <i class="fa {{ site.navigation.articles.icon }}"></i> 
-                {{ site.navigation.articles.text }}
-              </a>
-            </li>
-            <li {% if url == site.navigation.projets.url %}class="active"{% endif %}>
-              <a href="{{ site.navigation.projets.url }}" title="{{ site.navigation.projets.text }}">
-                <i class="fa {{ site.navigation.projets.icon }}"></i> 
-                {{ site.navigation.projets.text }}
-              </a>
-            </li>
-            <li {% if url == site.navigation.apropos.url %}class="active"{% endif %}>
-              <a href="{{ site.navigation.apropos.url }}" title="{{ site.navigation.apropos.text }}">
-                <i class="fa {{ site.navigation.apropos.icon }}"></i> 
-                {{ site.navigation.apropos.text }}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+      <div class="navbar-header">
+        {% if page.lang %}
+          {% assign lang=page.lang %}
+        {% else %}
+          {% assign lang="fr" %}
+        {% endif %}
+        <a class="navbar-brand" href="{{ site.t[lang].posts.url }}">
+          {{ site.name }}
+        </a>
+        <p class="navbar-text">
+          <a href="{{ site.t[lang].posts.url }}" class="navbar-link">{{ site.t[lang].posts.label }}</a>
+          &nbsp;|&nbsp;
+          <a href="{{ site.t[lang].about.url }}" class="navbar-link">{{ site.t[lang].about.label }}</a>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
       <div class="content">
+        {% if page.ref != nil %}
+          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+          {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+          <p class="pull-right lang-selector">
+            {% for post in posts %}
+              <a href="{{ post.url }}"><span class="flag-icon flag-icon-{{ site.flags[post.lang] }}"></span></a>
+            {% endfor %}
+            {% for page in pages %}
+              <a href="{{ page.url }}"><span class="flag-icon flag-icon-{{ site.flags[page.lang] }}"></span></a>
+            {% endfor %}
+          </p>
+        {% endif %}
+
         {% if page.title %}
           <h1 class="page-header">{{ page.title }}</h1>
         {% endif %}
         {{ content }}
       </div>
-
-      <footer class="well well-sm small">
-        Ce site est construit avec 
-        <a href="http://jekyllrb.com/">
-          jekyll
-        </a>
-        , habillé avec 
-        <a href="http://getbootstrap.com/">
-        bootstrap
-        </a>
-        et versionné chez 
-        <a href="https://github.com/bpaulin/bpaulin.net">
-          GitHub
-        </a>
-        . Il est mis à disposition selon les termes de la 
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-          Licence Creative Commons Attribution 4.0 International
-        </a>.
-      </footer>
-    </div> <!-- /container -->
+    </div>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>

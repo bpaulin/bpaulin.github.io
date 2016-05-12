@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Ubuntu 10.10 Mise à jour impossible
+lang: fr
 categories: linux
 ---
 

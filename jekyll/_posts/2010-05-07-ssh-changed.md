@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      REMOTE HOST IDENTIFICATION HAS CHANGED
+lang: fr
 categories: linux
 ---
 

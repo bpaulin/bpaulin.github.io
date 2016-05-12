@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Appliquer la norme PSR-2 au code PHP
+lang: fr
 categories: programmation
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Automatisation avec phing
+lang: fr
 categories: programmation
 ---
 

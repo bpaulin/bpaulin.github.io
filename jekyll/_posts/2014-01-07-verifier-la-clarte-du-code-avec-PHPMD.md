@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Vérifier la clarté du code avec PHPMD
+lang: fr
 categories: programmation
 ---
 
