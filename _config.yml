@@ -18,8 +18,8 @@ t:
       label: "A propos"
       url: "/apropos/"
 url: http://bpaulin.net
-github: http://gitub.com/bpaulin
-linkedin: http://linkedin
+github: https://github.com/bpaulin
+linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
 description: 'Aide mémoire en libre service'
 highlighter: true
 exclude: 
