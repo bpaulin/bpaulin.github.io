@@ -22,23 +22,10 @@ links:
   github: https://github.com/bpaulin
   linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
 description: 'Aide mémoire en libre service'
-highlighter: true
-exclude: 
-    - Gruntfile.js
-    - validation.report.json
-    - validation-status.json
-    - package.json
-    - json
-    - README
-    - LICENSE
-    - .gitignore
-    - bpaulin.net.sublime-project
-    - bpaulin.net.sublime-workspace
-    - mel.sh
-    - node_modules
-markdown: kramdown
-kramdown:
-  auto_ids: false
 permalink: /articles/:categories/:year/:month/:day/:title/
-gems:
-   - jekyll-gist
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
