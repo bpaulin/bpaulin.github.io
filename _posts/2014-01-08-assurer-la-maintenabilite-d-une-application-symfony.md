@@ -17,19 +17,19 @@ Les outils utilisés:
 
 Tout s'installe via composer:
 
-{% highlight bash %}
+```bash
 $ php composer.phar require --dev \
                     squizlabs/php_codesniffer:"*@stable" \
                     phpmd/phpmd:"*@stable" \
                     sebastian/phpcpd:"*@stable" \
                     phing/phing:"*@stable"
-{% endhighlight %}
+```
 
 ### Configuration
 
 Pour [PHPMD], créer le fichier **app/phpmd_rules.xml** contenant:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0"?>
 <ruleset name="Bpaulin phpmd ruleset"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
@@ -57,11 +57,11 @@ Pour [PHPMD], créer le fichier **app/phpmd_rules.xml** contenant:
         </properties>
     </rule>
 </ruleset>
-{% endhighlight %}
+```
 
 Pour [Phing], créer le fichier **maintainability.xml** à la racine projet contenant:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0"?>
 <project name="Maintainability" default="maintainability" basedir='.'>
     <target name="maintainability"
@@ -90,17 +90,17 @@ Pour [Phing], créer le fichier **maintainability.xml** à la racine projet cont
     </target>
 </project>
 
-{% endhighlight %}
+```
 
 ### Utilisation
 
 Pour vérifier que le code est propre:
-{% highlight bash %}
+```bash
 $ ./bin/phing -f maintainability.xml
-{% endhighlight %}
+```
 
 Intégration continue avec [Travis] dans le fichier**.travis.yml**:
-{% highlight yaml %}
+```yml
 language: php
 
 php:
@@ -111,7 +111,7 @@ php:
 before_script: composer install -n
 
 script: ./bin/phing -f maintainability.xml
-{% endhighlight %}
+```
 
 Si aucune erreur n'est levée, le code est propre ... mais rien ne dit que l'application fonctionne, ce n'est pas le but ici.
 
@@ -121,7 +121,7 @@ A titre d'exemple, les analyses du bundle AcmeDemo:
 
 #### phpcs
 
-{% highlight bash %}
+```bash
 $ ./bin/phing phpcs -f maintainability.xml
 Buildfile: /home/bruno/Dev/bpaulin/symfony-maintainability/maintainability.xml
 
@@ -154,11 +154,11 @@ Execution of target "phpcs" failed for the following reason: Task exited with co
 BUILD FAILED
 Task exited with code 1
 Total time: 0.2553 seconds
-{% endhighlight %}
+```
 
 #### phpmd
 
-{% highlight bash %}
+```bash
 $ ./bin/phing phpmd -f maintainability.xml
 Buildfile: /home/bruno/Dev/bpaulin/symfony-maintainability/maintainability.xml
 
@@ -175,11 +175,11 @@ Execution of target "phpmd" failed for the following reason: Task exited with co
 BUILD FAILED
 Task exited with code 2
 Total time: 0.3151 seconds
-{% endhighlight %}
+```
 
 #### phpcpd
 
-{% highlight bash %}
+```bash
 $ ./bin/phing phpcpd -f maintainability.xml
 Buildfile: /home/bruno/Dev/bpaulin/symfony-maintainability/maintainability.xml
 
@@ -196,7 +196,7 @@ Time: 33 ms, Memory: 3.00Mb
 BUILD FINISHED
 
 Total time: 0.1066 seconds
-{% endhighlight %}
+```
 
 ### Liens
 Le code est disponible sur [GitHub](https://github.com/bpaulin/symfony-maintenability) et le build sur travis: [![Build Status](https://travis-ci.org/bpaulin/symfony-maintenability.png?branch=master)](https://travis-ci.org/bpaulin/symfony-maintenability)
