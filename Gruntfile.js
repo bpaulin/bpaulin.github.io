@@ -21,7 +21,8 @@ module.exports = function(grunt) {
                 options: {
                     src: '.',
                     watch: true,
-                    serve: true
+                    serve: true,
+                    drafts: true
                 }
             },
         },
