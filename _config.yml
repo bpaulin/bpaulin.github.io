@@ -39,5 +39,6 @@ markdown: kramdown
 kramdown:
   auto_ids: false
 permalink: /articles/:categories/:year/:month/:day/:title/
+encoding: utf-8  
 gems:
    - jekyll-gist
