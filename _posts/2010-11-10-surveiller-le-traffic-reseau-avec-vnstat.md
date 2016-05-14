@@ -7,23 +7,23 @@ categories: linux
 
 Le débit de ma connexion s'est récemment effondré. J'ai voulu savoir si une des machines en était responsable, en monopolisant la bande passante.
 Pour ça, installer vnstat
-{% highlight sh %}
+```sh 
 $ sudo apt-get install vnstat
-{% endhighlight %}
+``` 
 Pour avoir le trafic en temps réel:
 
-{% highlight sh %}
+```sh 
 $ vnstat -l -i eth0
 Monitoring eth0...    (press CTRL-C to stop)
 rx:      360 kbit/s    64 p/s
 tx:       88 kbit/s    71 p/s
-{% endhighlight %}
+``` 
 * -l: affiche le trafic en temps réel
 * -i eth0: sélectionne l'interface eth0 (inutile ici car eth0 est l'interface sélectionnée par défaut)
 Dans un 1er temps, les infos sont affichées en temps réel
 
 Puis après l'arrêt, vnstat affiche le résumé de la session
-{% highlight sh %}
+```sh 
                            rx         |       tx
 --------------------------------------+------------------
   bytes                        0 KiB  |           1 KiB
@@ -39,4 +39,4 @@ Puis après l'arrêt, vnstat affiche le résumé de la session
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
  time                    18 seconds
-{% endhighlight %}
+``` 

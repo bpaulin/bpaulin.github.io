@@ -7,13 +7,13 @@ categories: programmation
 
 Ajouter [Phing] au dépendances de [Composer]
 
-{% highlight bash %}
+```bash 
 $ php composer.phar require --dev \
                     phing/phing:"*@stable"
-{% endhighlight %}
+``` 
 
 Créer à la racine du projet le fichier **build.xml** contenant par exemple pour tester une appli symfony
-{% highlight xml %}
+```xml 
 <?xml version="1.0"?>
 <project name="Example" default="test" basedir='.'>
     <target name="test"
@@ -30,13 +30,13 @@ Créer à la racine du projet le fichier **build.xml** contenant par exemple pou
             checkreturn="true"/>
     </target>
 </project>
-{% endhighlight %}
+``` 
 
 Avec ce build, pour lancer les test unitaires & de comportement:
 
-{% highlight bash %}
+```bash 
 $ ./bin/phing test
-{% endhighlight %}
+``` 
 
 [Phing]: http://www.phing.info/
 [Composer]: http://getcomposer.org/

@@ -11,10 +11,10 @@ categories: programmation
 
 [PHPMD] est disponible via composer:
 
-{% highlight bash %}
+```bash 
 $ php composer.phar require --dev \
                     phpmd/phpmd:"*@stable"
-{% endhighlight %}
+``` 
 
 ### Utilisation
 
@@ -25,15 +25,15 @@ $ php composer.phar require --dev \
 
 Par exemple, pour vérifier le nommage et la longueur des méthodes d'une appli symfony et afficher le résultat dans le terminal:
 
-{% highlight bash %}
+```bash 
 $ ./bin/phpmd src/ text codesize,naming
-{% endhighlight %}
+``` 
 
 Il est possible de définir dans un fichier xml l'ensemble des règles à appliquer et même de surcharger certaines vérifications.
 
 Pour exemple, j'utilise ce fichier **app/phpmd_rules.xml** pour mes symfony. Il applique toutes les règles, fixe la longueur minimal des noms de variables à 2 caractères (pour signaler **$i** mais laisser passer le fameux **$em**) et fixe la taille maximale d'une classe à 20 méthodes.
 
-{% highlight xml %}
+```xml 
 <?xml version="1.0"?>
 <ruleset name="Bpaulin phpmd ruleset"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
@@ -61,13 +61,13 @@ Pour exemple, j'utilise ce fichier **app/phpmd_rules.xml** pour mes symfony. Il 
         </properties>
     </rule>
 </ruleset>
-{% endhighlight %}
+``` 
 
 Avec ce fichier, la vérification devient:
 
-{% highlight bash %}
+```bash 
 $ ./bin/phpmd src/ text app/phpmd_rules.xml
-{% endhighlight %}
+``` 
 
 [PHPMD]: http://phpmd.org/
 [Maintenabilité]: http://fr.wikipedia.org/wiki/Maintenabilit%C3%A9

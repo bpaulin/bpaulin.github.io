@@ -45,27 +45,27 @@ La [documentation] de XMLRésumé est extrêmement claire. Le [DTD] du XML est p
 
 Valider le xml:
 
-{% highlight bash %}
+```bash 
 $ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml 
-{% endhighlight %}
+``` 
 
 Générer le html:
 
-{% highlight bash %}
+```bash 
 $ xsltproc --novalid -o jekyll/_includes/cv.html cv/cv-html.xsl cv/brunopaulin.xml 
-{% endhighlight %}
+``` 
 
 Générer la vcard:
 
-{% highlight bash %}
+```bash 
 $ xsltproc --novalid -o jekyll/apropos/brunopaulin.vcf cv/cv-vcf.xsl cv/brunopaulin.xml 
-{% endhighlight %}
+``` 
 
 Générer le pdf:
 
-{% highlight bash %}
+```bash 
 $ fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf
-{% endhighlight %}
+``` 
 
 
 ## Le résultat

@@ -11,11 +11,11 @@ Le chemin de ces dossiers est indiqué dans ~/.config/user-dirs
 
 Par exemple, chez moi
 
-{% highlight sh %}
+```sh 
 $ nano .config/user-dirs.dirs
-{% endhighlight %}
+``` 
 
-{% highlight sh %}
+```sh 
 # This file is written by xdg-user-dirs-update
 # If you want to change or add directories, just edit the line you're
 # interested in. All local changes will be retained on the next run
@@ -31,7 +31,7 @@ XDG_DOCUMENTS_DIR="$HOME/Documents"
 XDG_MUSIC_DIR="$HOME/Musique"
 XDG_PICTURES_DIR="$HOME/Images"
 XDG_VIDEOS_DIR="$HOME/Vidéos"
-{% endhighlight %}
+``` 
 
 
 [source](http://www.howtogeek.com/howto/17752/use-any-folder-for-your-ubuntu-desktop-even-a-dropbox-folder/)

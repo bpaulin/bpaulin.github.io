@@ -14,7 +14,7 @@ La solution est d'adopter une norme commune. Peu importe la norme, du moment qu'
 Le [PHP Framework Interop Group] publie des normes reprises par beaucoup de projets. C'est par exemple le cas des [Standards Symfony] qui suivent la norme [PSR-2].
 
 Pas de long discours, mais un petit exemple tiré du site:
-{% highlight php %}
+```php 
 <?php
 namespace Vendor\Package;
 
@@ -40,27 +40,27 @@ class Foo extends Bar implements FooInterface
         // method body
     }
 }
-{% endhighlight %}
+``` 
 
 ### Controller son code
 
 [PHP_CodeSniffer] est disponible via composer:
-{% highlight bash %}
+```bash 
 $ php composer.phar require --dev \
                     squizlabs/php_codesniffer:"*@stable"
-{% endhighlight %}
+``` 
 
 Pour valider le code d'une appli symfony contre la norme [PSR-2]:
 
-{% highlight bash %}
+```bash 
 $ ./bin/phpcs -p --standard=PSR2 src/
-{% endhighlight %}
+``` 
 
 _Pour ajouter d'autres vérifications, notamment la présence des [DocBlocks] pour [phpDocumentor]_:
 
-{% highlight bash %}
+```bash 
 $ ./bin/phpcs -p src/ 
-{% endhighlight %}
+``` 
 
 ### Corriger son code
 
@@ -68,27 +68,27 @@ $ ./bin/phpcs -p src/
 
 Pour le télécharger:
 
-{% highlight bash %}
+```bash 
 $ wget http://cs.sensiolabs.org/get/php-cs-fixer.phar
-{% endhighlight %}
+``` 
 
 Pour mettre à jour [php-cs-fixer]:
 
-{% highlight bash %}
+```bash 
 $ php php-cs-fixer.phar self-update
-{% endhighlight %}
+``` 
 
 Pour corriger le code d'une appli symfony pour suivre [PSR-2] plus quelques ajouts comme la suppression des _use_ inutiles par exemple:
 
-{% highlight bash %}
+```bash 
 $ php php-cs-fixer.phar fix src/
-{% endhighlight %}
+``` 
 
 _Pour corriger le code d'une appli symfony uniquement pour [PSR-2]:_
 
-{% highlight bash %}
+```bash 
 $ php php-cs-fixer.phar fix src/ --level=psr2
-{% endhighlight %}
+``` 
 
 [Standards Symfony]: http://symfony.com/doc/master/contributing/code/standards.html
 [PSR-2]: http://www.php-fig.org/psr/psr-2/
