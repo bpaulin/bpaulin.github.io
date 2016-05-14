@@ -8,12 +8,12 @@ categories: jekyll
 Le code utilisé pour la page [Articles](/articles/) pour afficher les articles classés par catégories
 
 ```smarty 
-{% raw 
-{% for category in site.categories 
+{% raw %} 
+{% for category in site.categories %} 
     <h2 id="{{ category | first }}">
         {{ category | first | capitalize }}
     </h2>
-    {% for post in category[1] 
+    {% for post in category[1]  %}
         <ul class="list-unstyled">
             <li>
                 <a href="{{ post.url }}">
@@ -21,8 +21,8 @@ Le code utilisé pour la page [Articles](/articles/) pour afficher les articles 
                 </a>
             </li>
         </ul>
-    {% endfor 
-{% endfor 
-{% endraw 
+    {% endfor  %}
+{% endfor  %}
+{% endraw %}
 ``` 
 
