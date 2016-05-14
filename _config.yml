@@ -18,8 +18,9 @@ t:
       label: "A propos"
       url: "/apropos/"
 url: http://bpaulin.net
-github: https://github.com/bpaulin
-linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
+links:
+  github: https://github.com/bpaulin
+  linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
 description: 'Aide mémoire en libre service'
 highlighter: true
 exclude: 
@@ -39,6 +40,5 @@ markdown: kramdown
 kramdown:
   auto_ids: false
 permalink: /articles/:categories/:year/:month/:day/:title/
-encoding: utf-8  
 gems:
    - jekyll-gist
