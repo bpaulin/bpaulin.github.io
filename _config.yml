@@ -21,6 +21,7 @@ url: http://bpaulin.net
 links:
   github: https://github.com/bpaulin
   linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
+  linkedin_en: https://www.linkedin.com/in/bruno-paulin-29904a67/en
 description: 'Aide mémoire en libre service'
 permalink: /articles/:categories/:year/:month/:day/:title/
 lsi: false
