@@ -43,3 +43,6 @@ exclude:
   - bpaulin.net.sublime-workspace
   - mel.sh
   - node_modules
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
