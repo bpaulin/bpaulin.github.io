@@ -30,3 +30,16 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
+exclude: 
+  - Gruntfile.js
+  - validation.report.json
+  - validation-status.json
+  - package.json
+  - json
+  - README
+  - LICENSE
+  - .gitignore
+  - bpaulin.net.sublime-project
+  - bpaulin.net.sublime-workspace
+  - mel.sh
+  - node_modules
