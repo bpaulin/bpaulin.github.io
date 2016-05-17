@@ -13,6 +13,7 @@ $ php composer.phar require --dev \
 ``` 
 
 Créer à la racine du projet le fichier **build.xml** contenant par exemple pour tester une appli symfony
+
 ```xml 
 <?xml version="1.0"?>
 <project name="Example" default="test" basedir='.'>
