@@ -5,6 +5,7 @@ lang: fr
 categories: jekyll
 ---
 
+
 Le code utilisé pour la page [Articles](/articles/) pour afficher les articles classés par catégories
 
 ```smarty 

@@ -26,25 +26,11 @@ module.exports = function(grunt) {
                 }
             },
         },
-
-        htmlmin: {
-            options: {
-                removeComments: true,
-                collapseWhitespace: true
-            },
-            files: {
-                expand: true,
-                src: ['**/*.html'],
-                dest: '_site/',
-                cwd: '_site/'
-            }
-        },
     });
 
     grunt.loadNpmTasks("grunt-jekyll");
     grunt.loadNpmTasks('grunt-w3c-html-validation');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask("dev", ["jekyll:serve"]);
-    grunt.registerTask("ci", ["jekyll:build", "htmlmin", "validation"]);
+    grunt.registerTask("ci", ["jekyll:build", "validation"]);
 };
