@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+{% if page.lang %}
+  {% assign lang=page.lang %}
+{% else %}
+  {% assign lang="fr" %}
+{% endif %}
+<html lang='{{ lang }}'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
       {% if page.title and page.title != site.name %}
-        {{ page.title }} :: 
+        {{ page.title }} ::
       {% endif %}
       {{ site.name }}
     </title>
@@ -29,11 +34,6 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        {% if page.lang %}
-          {% assign lang=page.lang %}
-        {% else %}
-          {% assign lang="fr" %}
-        {% endif %}
         <a class="navbar-brand" href="{{ site.t[lang].posts.url }}">
           {{ site.name }}
         </a>

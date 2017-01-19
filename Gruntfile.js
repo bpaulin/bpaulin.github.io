@@ -14,7 +14,8 @@ module.exports = function(grunt) {
         jekyll: {
             build: {
                 options: {
-                    src: '.'
+                    src: '.',
+                    bundleExec: true
                 }
             },
             serve: {
@@ -22,7 +23,8 @@ module.exports = function(grunt) {
                     src: '.',
                     watch: true,
                     serve: true,
-                    drafts: true
+                    drafts: true,
+                    bundleExec: true
                 }
             },
         },

@@ -30,7 +30,7 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
-exclude: 
+exclude:
   - Gruntfile.js
   - validation.report.json
   - validation-status.json
@@ -43,6 +43,7 @@ exclude:
   - bpaulin.net.sublime-workspace
   - mel.sh
   - node_modules
+  - vendor
 gems:
   - jekyll-sitemap
   - jekyll-feed
