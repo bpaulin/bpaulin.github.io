@@ -44,6 +44,6 @@ exclude:
   - mel.sh
   - node_modules
   - vendor
-gems:
+plugin:
   - jekyll-sitemap
   - jekyll-feed
