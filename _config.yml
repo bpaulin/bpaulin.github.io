@@ -1,27 +1,8 @@
 name: BPaulin
-flags:
-  en: gb
-  fr: fr
-t:
-  en:
-    posts:
-      label: "Posts"
-      url: "/en/"
-    about:
-      label: "About"
-      url: "/about/"
-  fr:
-    posts:
-      label: "Articles"
-      url: "/"
-    about:
-      label: "A propos"
-      url: "/apropos/"
 url: http://bpaulin.net
 links:
   github: https://github.com/bpaulin
   linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
-  linkedin_en: https://www.linkedin.com/in/bruno-paulin-29904a67/en
 description: 'Aide mémoire en libre service'
 permalink: /articles/:categories/:year/:month/:day/:title/
 lsi: false
@@ -31,18 +12,9 @@ highlighter: rouge
 gist:
   noscript: false
 exclude:
-  - Gruntfile.js
-  - validation.report.json
-  - validation-status.json
-  - package.json
-  - json
   - README
   - LICENSE
   - .gitignore
-  - bpaulin.net.sublime-project
-  - bpaulin.net.sublime-workspace
-  - mel.sh
-  - node_modules
   - vendor
 plugin:
   - jekyll-sitemap

@@ -2,25 +2,22 @@
 {% if page.lang %}
   {% assign lang=page.lang %}
 {% else %}
-  {% assign lang="fr" %}
+  {% assign lang="en" %}
 {% endif %}
 <html lang='{{ lang }}'>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-      {% if page.title and page.title != site.name %}
-        {{ page.title }} ::
-      {% endif %}
-      {{ site.name }}
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/syntax.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/bpaulin.css">
-    {% feed_meta %}
-    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d?s=16" />
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if page.title and page.title != site.name %}
+      {{ page.title }} ::
+    {% endif %}
+    {{ site.name }}
+  </title>
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/bpaulin.css">
+  {% feed_meta %}
+  <link rel="shortcut icon" href="http://www.gravatar.com/avatar/c84405cfcdcb4b95e229a6ae640b621d?s=16" />
 </head>
 <body>
   <script>
@@ -31,45 +28,38 @@
   ga('create', 'UA-46867580-1', 'bpaulin.net');
   ga('send', 'pageview');
   </script>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="{{ site.t[lang].posts.url }}">
-          {{ site.name }}
-        </a>
-        <p class="navbar-text">
-          <a href="{{ site.t[lang].posts.url }}" class="navbar-link">{{ site.t[lang].posts.label }}</a>
-          &nbsp;|&nbsp;
-          <a href="{{ site.t[lang].about.url }}" class="navbar-link">{{ site.t[lang].about.label }}</a>
-      </div>
-    </div>
-  </nav>
-    <div class="container">
-      <div class="content">
-        {% if page.ref != nil %}
-          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-          {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-          <p class="pull-right lang-selector">
-            {% for post in posts %}
-              <a href="{{ post.url }}">
-                <img src="/img/{{ site.flags[post.lang] }}.svg" alt="{{ post.lang }}">
-              </a>
-            {% endfor %}
-            {% for page in pages %}
-              <a href="{{ page.url }}">
-                <img src="/img/{{ site.flags[page.lang] }}.svg" alt="{{ page.lang }}">
-              </a>
-            {% endfor %}
-          </p>
-        {% endif %}
 
-        {% if page.title %}
-          <h1 class="page-header">{{ page.title }}</h1>
-        {% endif %}
-        {{ content }}
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+  <header>
+    <h1>
+      {% if page.url == "/" %}
+        {{ site.name }}
+      {% else %}
+        <a href="/">{{ site.name }}</a>
+      {% endif %}
+    </h1>
+    <h2>
+      {{ page.title }}
+    </h2>
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+
+  <footer>
+    <p>
+      <a href="{{ site.links.github }}">Github</a>
+      /
+      <a href="{{ site.links.linkedin }}">Linkedin</a>
+    </p>
+      <ul>
+        <li>Human since 1980</li>
+        <li>Developer since 1997</li>
+        <li>Linux user since 2002</li>
+        <li>Lyonnais since 2012</li>
+        <li>Husband since 2014</li>
+        <li>Dad since 2017</li>
+      </ul>
+  </footer>
+</body>
 </html>

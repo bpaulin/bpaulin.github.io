@@ -1,3 +1,5 @@
-body { padding-top: 60px; }
-.lang-selector img { width: 30px }
-.ytiframe { display:block; margin: 0 auto}
+body {font-family: monospace; background-color: #111; color: #ccc; font-size: 1.1em;}
+pre.highlight{border: #ddd 1px solid;}
+a {color: white;}
+body>footer{border-top: #ccc 1px dotted}
+body>header{border-bottom: #ccc 1px dotted}
