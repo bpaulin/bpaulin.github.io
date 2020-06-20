@@ -16,6 +16,8 @@ exclude:
   - LICENSE
   - .gitignore
   - vendor
+  - .vscode
+  - .devcontainer
 plugin:
   - jekyll-sitemap
   - jekyll-feed
