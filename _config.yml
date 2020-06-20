@@ -18,6 +18,7 @@ exclude:
   - vendor
   - .vscode
   - .devcontainer
+  - .github
 plugin:
   - jekyll-sitemap
   - jekyll-feed
