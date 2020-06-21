@@ -2,6 +2,7 @@
 layout: post
 title: Détecteur de mensonge avec 9 cartes
 lang: fr
+categories: misc
 ---
 
 Les maths, c'est magique et la magie c'est souvent des maths.

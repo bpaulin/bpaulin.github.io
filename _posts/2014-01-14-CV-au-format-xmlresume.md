@@ -2,7 +2,7 @@
 layout: post
 title: CV au format XMLRésumé
 lang: fr
-categories: vie
+categories: misc
 ---
 
 ## Le problème

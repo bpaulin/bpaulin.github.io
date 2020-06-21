@@ -2,7 +2,7 @@
 layout: post
 title: Tester une appli Symfony avec Behat
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 Une procédure fonctionnelle pour configurer [Behat] et Symfony, de la création du projet aux premiers scénarios.

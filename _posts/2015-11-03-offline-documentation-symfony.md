@@ -2,7 +2,7 @@
 layout: post
 title: Documentation offline pour symfony
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 Téléchargement de la doc pour symfony 2.7, pour une utilisation hors ligne

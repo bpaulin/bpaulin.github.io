@@ -3,6 +3,7 @@ layout: post
 title: Nous sommes si petits
 lang: fr
 ref: we-are-so-small
+categories: misc
 ---
 
 Ce script me permet de revasser de temps en temps. Une simple commande pour voyager vite et loin...

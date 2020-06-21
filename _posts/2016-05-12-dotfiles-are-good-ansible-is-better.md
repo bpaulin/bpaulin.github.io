@@ -3,6 +3,7 @@ layout: post
 title: dotFiles are good, ansible is better
 lang: en
 ref: dotfiles-are-good-ansible-is-better
+categories: linux
 ---
 
 On Linux, everything is configured with plain text files, even softwares witch provide a shiny configuration GUI.

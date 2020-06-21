@@ -2,7 +2,7 @@
 layout: post
 title: Automatisation avec phing
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 Ajouter [Phing] au dépendances de [Composer]

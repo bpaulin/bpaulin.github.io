@@ -2,7 +2,7 @@
 layout: post
 title: Vérifier la clarté du code avec PHPMD
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 [PHP Mess Detector (PHPMD)][phpmd] est littéralement un détecteur de bordel. Il analyse le code PHP pour détecter des _problèmes_ nuisant à la [Maintenabilité] d'une application, comme par exemple des variables ou méthodes déclarées mais pas utilisées, un nommage trop long ou trop court, les méthodes trop longues ou trop complexes, etc...

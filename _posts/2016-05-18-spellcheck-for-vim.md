@@ -3,6 +3,7 @@ layout: post
 title: Spell check for vim
 lang: en
 ref: spellcheck-for-vim
+categories: dev
 ---
 
 Vim is great, Vim is good. It's faster to learn how to use it than learn how to do without.

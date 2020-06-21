@@ -3,6 +3,7 @@ layout: post
 title: Correcteur d'orthographe pour Vim
 lang: fr
 ref: spellcheck-for-vim
+categories: dev
 ---
 
 Vim est bien, Vim est grand. C'est plus rapide d'apprendre à s'en servir que d'apprendre à s'en passer.

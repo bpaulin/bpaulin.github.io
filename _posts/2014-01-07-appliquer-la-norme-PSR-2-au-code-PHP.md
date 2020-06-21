@@ -2,7 +2,7 @@
 layout: post
 title: Appliquer la norme PSR-2 au code PHP
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 Chaque développeur écrit son code avec ses propres habitudes d'indentation, de nommage, etc... ce qui nuit a la lisibilité du code par d'autres personens ayant d'autres habitudes.

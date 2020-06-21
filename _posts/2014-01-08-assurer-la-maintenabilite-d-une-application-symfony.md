@@ -2,7 +2,7 @@
 layout: post
 title: Assurer la maintenabilité d'une application symfony
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 Une procédure fonctionnelle pour pouvoir vérifier la [Maintenabilité] d'une application symfony en une seule commande.

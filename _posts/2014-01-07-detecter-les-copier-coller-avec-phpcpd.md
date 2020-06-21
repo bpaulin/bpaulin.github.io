@@ -2,7 +2,7 @@
 layout: post
 title: Détecter les copier/coller avec phpcpd
 lang: fr
-categories: programmation
+categories: dev
 ---
 
 [PHP Copy Paste Detector (PHPCPD)][phpcpd] detecte si les mêmes lignes de code sont à plusieurs endroits dans la source d'une application.

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Config de myhomeserver1
+permalink: /articles/2018/05/09/bticino-legrand-bouygues/
+categories: home
 lang: fr
 ---
 
