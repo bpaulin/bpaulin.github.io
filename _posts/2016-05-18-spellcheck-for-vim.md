@@ -22,6 +22,7 @@ Or with another language
 ```
 :set spell spelllang=fr
 ```
+
 (if it's your first time with this language, Vim will download every files you need)
 
 Stop spell checking
@@ -32,11 +33,11 @@ Stop spell checking
 
 ## How to use
 
- * **]s** move to next error
- * **[s** move to previous error
- * **z=** suggest a list of alternatives
- * **zg** add the current word to dictionary
- * **zug** cancel dictionary update
+- **]s** move to next error
+- **[s** move to previous error
+- **z=** suggest a list of alternatives
+- **zg** add the current word to dictionary
+- **zug** cancel dictionary update
 
 ## Spell check files automatically
 

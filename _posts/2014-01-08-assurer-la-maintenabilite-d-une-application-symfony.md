@@ -1,6 +1,6 @@
 ---
-layout:     post
-title:      Assurer la maintenabilité d'une application symfony
+layout: post
+title: Assurer la maintenabilité d'une application symfony
 lang: fr
 categories: programmation
 ---
@@ -95,11 +95,13 @@ Pour [Phing], créer le fichier **maintainability.xml** à la racine projet cont
 ### Utilisation
 
 Pour vérifier que le code est propre:
+
 ```bash
 $ ./bin/phing -f maintainability.xml
 ```
 
 Intégration continue avec [Travis] dans le fichier**.travis.yml**:
+
 ```yml
 language: php
 
@@ -199,11 +201,12 @@ Total time: 0.1066 seconds
 ```
 
 ### Liens
+
 Le code est disponible sur [GitHub](https://github.com/bpaulin/symfony-maintenability) et le build sur travis: [![Build Status](https://travis-ci.org/bpaulin/symfony-maintenability.png?branch=master)](https://travis-ci.org/bpaulin/symfony-maintenability)
 
-[Travis]: https://travis-ci.org/
-[Maintenabilité]: http://fr.wikipedia.org/wiki/Maintenabilit%C3%A9
-[PHPMD]: http://phpmd.org/
+[travis]: https://travis-ci.org/
+[maintenabilité]: http://fr.wikipedia.org/wiki/Maintenabilit%C3%A9
+[phpmd]: http://phpmd.org/
 [phpcpd]: https://github.com/sebastianbergmann/phpcpd
-[PHP_CodeSniffer]: https://github.com/squizlabs/PHP_CodeSniffer
-[Phing]: http://www.phing.info
+[php_codesniffer]: https://github.com/squizlabs/PHP_CodeSniffer
+[phing]: http://www.phing.info

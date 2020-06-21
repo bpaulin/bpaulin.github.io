@@ -1,6 +1,6 @@
 ---
-layout:     post
-title:      Tester une appli Symfony avec Behat
+layout: post
+title: Tester une appli Symfony avec Behat
 lang: fr
 categories: programmation
 ---
@@ -46,12 +46,12 @@ Activer les extensions en créant un fichier **behat.yml** à la racine du proje
 
 ```yaml
 default:
-    extensions:
-        Behat\Symfony2Extension\Extension:
-            mink_driver: true
-            bundle: AcmeBehatBundle
-        Behat\MinkExtension\Extension:
-            default_session: 'symfony2'
+  extensions:
+    Behat\Symfony2Extension\Extension:
+      mink_driver: true
+      bundle: AcmeBehatBundle
+    Behat\MinkExtension\Extension:
+      default_session: "symfony2"
 ```
 
 Initialiser behat pour le bundle voulu
@@ -126,9 +126,9 @@ Créer un fichier **package.json** à la racine du projet contenant ces lignes:
 
 ```json
 {
-    "dependencies": {
-      "phantomjs": "*"
-    }
+  "dependencies": {
+    "phantomjs": "*"
+  }
 }
 ```
 
@@ -149,15 +149,15 @@ Modifier **behat.yml**
 
 ```yaml
 default:
-    extensions:
-        Behat\Symfony2Extension\Extension:
-            mink_driver: true
-            bundle: AcmeBehatBundle
-        Behat\MinkExtension\Extension:
-            default_session: 'symfony2'
-            base_url: 'http://localhost:8000'
-            selenium2:
-                wd_host: "http://localhost:8643/wd/hub"
+  extensions:
+    Behat\Symfony2Extension\Extension:
+      mink_driver: true
+      bundle: AcmeBehatBundle
+    Behat\MinkExtension\Extension:
+      default_session: "symfony2"
+      base_url: "http://localhost:8000"
+      selenium2:
+        wd_host: "http://localhost:8643/wd/hub"
 ```
 
 ### Test avec PhantomJS
@@ -244,25 +244,26 @@ Intégration continue avec [Travis] dans le fichier**.travis.yml**:
 language: php
 
 php:
-    - 5.4
+  - 5.4
 
 before_script:
-    - composer install -n
-    - npm install
-    - php app/console server:run &
-    - ./node_modules/.bin/phantomjs --webdriver=8643 &
+  - composer install -n
+  - npm install
+  - php app/console server:run &
+  - ./node_modules/.bin/phantomjs --webdriver=8643 &
 
 script:
-    - ./bin/behat --format=progress
+  - ./bin/behat --format=progress
 ```
 
 ### Liens
+
 Le code est disponible sur [GitHub](https://github.com/bpaulin/symfony-behat) et le build sur travis: [![Build Status](https://travis-ci.org/bpaulin/symfony-behat.png?branch=master)](https://travis-ci.org/bpaulin/symfony-behat)
 
-[Travis]: https://travis-ci.org/
-[BDD]: http://en.wikipedia.org/wiki/Behavior-driven_development
-[Behat]: http://behat.org/
-[Mink]: http://mink.behat.org/
-[Gherkin]: http://docs.behat.org/guides/1.gherkin.html
-[PhantomJS]: http://phantomjs.org/
+[travis]: https://travis-ci.org/
+[bdd]: http://en.wikipedia.org/wiki/Behavior-driven_development
+[behat]: http://behat.org/
+[mink]: http://mink.behat.org/
+[gherkin]: http://docs.behat.org/guides/1.gherkin.html
+[phantomjs]: http://phantomjs.org/
 [npm]: https://npmjs.org/

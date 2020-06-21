@@ -1,24 +1,24 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Serve",
-            "type": "shell",
-            "command": "jekyll serve --livereload",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "options": {
-                "env": {
-                    "LC_ALL":"C.UTF-8",
-                    "LANG":"en_US.UTF-8",
-                    "LANGUAGE":"en_US.UTF-8",
-                }
-            },
-            "isBackground": true,
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve",
+      "type": "shell",
+      "command": "jekyll serve --livereload",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "options": {
+        "env": {
+          "LC_ALL": "C.UTF-8",
+          "LANG": "en_US.UTF-8",
+          "LANGUAGE": "en_US.UTF-8"
         }
-    ]
+      },
+      "isBackground": true
+    }
+  ]
 }

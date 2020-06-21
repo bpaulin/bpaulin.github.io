@@ -1,6 +1,6 @@
 ---
-layout:     post
-title:      Sauvegarde de disquettes
+layout: post
+title: Sauvegarde de disquettes
 lang: fr
 categories: linux
 ---

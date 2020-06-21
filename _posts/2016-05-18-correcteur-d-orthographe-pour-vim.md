@@ -22,6 +22,7 @@ Ou pour une autre langue
 ```
 :set spell spelllang=fr
 ```
+
 (Si c'est la première fois pour ce langage, Vim va télécharger les fichiers dont il a besoin)
 
 Arrêter la vérification
@@ -32,11 +33,11 @@ Arrêter la vérification
 
 ## Comment utiliser la correction
 
- * **]s** aller à l'erreur suivante
- * **[s** aller à l'erreur précédente
- * **z=** suggérer des correction
- * **zg** ajouter le mot au dictionnaire
- * **zug** annuler l'ajout au dictionnaire
+- **]s** aller à l'erreur suivante
+- **[s** aller à l'erreur précédente
+- **z=** suggérer des correction
+- **zg** ajouter le mot au dictionnaire
+- **zug** annuler l'ajout au dictionnaire
 
 ## Lancer automatiquement la correction
 

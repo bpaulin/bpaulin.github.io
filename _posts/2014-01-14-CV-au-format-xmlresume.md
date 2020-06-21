@@ -1,6 +1,6 @@
 ---
-layout:     post
-title:      CV au format XMLRésumé
+layout: post
+title: CV au format XMLRésumé
 lang: fr
 categories: vie
 ---
@@ -14,10 +14,10 @@ Le problème est que je veux maintenant un CV intégré sur ce site, ce qui éli
 - toutes les sources doivent être versionnées et éditables avec un simple éditeur de texte
 - le fond et la forme doivent être strictement séparés
 - je veux que les modifications du fond soient répercutées le plus automatiquement possible sous ces formes:
-   - html à intégrer sur ce site
-   - html indépendante
-   - texte brute (pour relecture)
-   - pdf
+  - html à intégrer sur ce site
+  - html indépendante
+  - texte brute (pour relecture)
+  - pdf
 - _si possible, je voudrais jouer un peu avec le format xml_
 
 ## Le choix
@@ -37,49 +37,48 @@ La [documentation] de XMLRésumé est extrêmement claire. Le [DTD] du XML est p
 
 ## Les outils
 
-* [xmllint]  (installé par le paquet [libxml2-utils](apt://libxml2-utils)) valide le xml source. 
-* [xsltproc]  (installé par le paquet [xsltproc](apt://xsltproc)) réalise la transformation en html et vcard. 
-* [Apache FOP]  (installé par le paquet [fop](apt://fop)) réalise la transformation en pdf.
+- [xmllint] (installé par le paquet [libxml2-utils](apt://libxml2-utils)) valide le xml source.
+- [xsltproc] (installé par le paquet [xsltproc](apt://xsltproc)) réalise la transformation en html et vcard.
+- [Apache FOP] (installé par le paquet [fop](apt://fop)) réalise la transformation en pdf.
 
 ## Les commandes
 
 Valider le xml:
 
-```bash 
-$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml 
-``` 
+```bash
+$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml
+```
 
 Générer le html:
 
-```bash 
-$ xsltproc --novalid -o jekyll/_includes/cv.html cv/cv-html.xsl cv/brunopaulin.xml 
-``` 
+```bash
+$ xsltproc --novalid -o jekyll/_includes/cv.html cv/cv-html.xsl cv/brunopaulin.xml
+```
 
 Générer la vcard:
 
-```bash 
-$ xsltproc --novalid -o jekyll/apropos/brunopaulin.vcf cv/cv-vcf.xsl cv/brunopaulin.xml 
-``` 
+```bash
+$ xsltproc --novalid -o jekyll/apropos/brunopaulin.vcf cv/cv-vcf.xsl cv/brunopaulin.xml
+```
 
 Générer le pdf:
 
-```bash 
+```bash
 $ fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf
-``` 
-
+```
 
 ## Le résultat
 
-* le [fichier pdf](/apropos/brunopaulin.pdf) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-pdf.xsl)
-* la [vcard](/apropos/brunopaulin.vcf) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-vcf.xsl)
-* la [page html](/apropos/) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-html.xsl)
+- le [fichier pdf](/apropos/brunopaulin.pdf) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-pdf.xsl)
+- la [vcard](/apropos/brunopaulin.vcf) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-vcf.xsl)
+- la [page html](/apropos/) avec cette [feuille de style](https://github.com/bpaulin/bpaulin.net/blob/master/cv/cv-html.xsl)
 
 [grunt-xsltproc]: https://npmjs.org/package/grunt-xsltproc
-[XMLRésuméLibrary]: http://xmlresume.sourceforge.net/
+[xmlrésumélibrary]: http://xmlresume.sourceforge.net/
 [documentation]: http://xmlresume.sourceforge.net/user-guide/index.html
-[DTD]: http://xmlresume.sourceforge.net/dtd/resume.dtd
-[Europass]: http://interop.europass.cedefop.europa.eu/data-model/xml-resources/
+[dtd]: http://xmlresume.sourceforge.net/dtd/resume.dtd
+[europass]: http://interop.europass.cedefop.europa.eu/data-model/xml-resources/
 [xmllint]: http://xmlsoft.org/xmllint.html
 [libxml2-utils]: apt://libxml2-utils
 [xsltproc]: http://xmlsoft.org/XSLT/xsltproc.html
-[Apache FOP]: http://xmlgraphics.apache.org/fop/
+[apache fop]: http://xmlgraphics.apache.org/fop/
