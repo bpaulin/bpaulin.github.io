@@ -22,6 +22,7 @@ RUN apt-get update \
         less \
         zlib1g-dev \
         locales \
+        yarnpkg \
     #
     # Install ruby
     && apt-get install -y \
@@ -34,6 +35,9 @@ RUN apt-get update \
     && gem install \
         bundler \
     && bundle install \
+    #
+    ## install prettier
+    && yarnpkg global add prettier \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \

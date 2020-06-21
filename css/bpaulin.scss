@@ -1,0 +1,40 @@
+---
+---
+
+body {
+  max-width: 50em;
+}
+
+div.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer,
+header {
+  flex: 1 100%;
+}
+
+aside {
+  order: 3;
+}
+
+article {
+  flex: 1 100%;
+  order: 2;
+}
+
+footer {
+  order: 4;
+}
+
+@media all and (min-width: 800px) {
+  article {
+    flex: 3;
+    order: 3;
+  }
+  aside {
+    flex: 1;
+    order: 2;
+  }
+}
