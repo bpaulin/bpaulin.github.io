@@ -22,6 +22,10 @@ aside {
 article {
   flex: 1 100%;
   order: 2;
+
+  h1:first-of-type {
+    margin-top: 0;
+  }
 }
 
 footer {
@@ -37,4 +41,9 @@ footer {
     flex: 1;
     order: 2;
   }
+}
+
+ul.milestones {
+  list-style: none;
+  padding-left: 0;
 }

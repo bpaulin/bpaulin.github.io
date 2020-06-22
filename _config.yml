@@ -22,3 +22,5 @@ exclude:
 plugin:
   - jekyll-sitemap
   - jekyll-feed
+kramdown:
+  header_offset: 1
