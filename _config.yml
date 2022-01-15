@@ -1,11 +1,7 @@
-name: BPaulin
-url: http://bpaulin.net
 links:
   github: https://github.com/bpaulin
   linkedin: https://www.linkedin.com/in/bruno-paulin-29904a67
-description: 'Aide mémoire en libre service'
 permalink: /articles/:categories/:year/:month/:day/:title/
-lsi: false
 safe: true
 incremental: false
 highlighter: rouge
@@ -16,6 +12,10 @@ exclude:
   - LICENSE
   - .gitignore
   - vendor
-plugin:
-  - jekyll-sitemap
-  - jekyll-feed
+theme: minima
+title: Bpaulin.net
+author: Bruno Paulin
+description: 'Aide mémoire en libre service'
+github_username: bpaulin
+# linkedin_username: bruno-paulin-29904a67
+google_analytics: UA-46867580-1
