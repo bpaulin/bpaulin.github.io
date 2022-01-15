@@ -19,3 +19,6 @@ description: 'Aide mémoire en libre service'
 github_username: bpaulin
 # linkedin_username: bruno-paulin-29904a67
 google_analytics: UA-46867580-1
+# header_pages:
+#   - about.md
+#   - projects.md
