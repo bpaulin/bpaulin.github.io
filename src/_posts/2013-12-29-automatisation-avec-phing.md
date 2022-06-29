@@ -1,43 +1,42 @@
 ---
-layout:     post
-title:      Automatisation avec phing
-lang: fr
-categories: programmation
+title: Automatisation avec phing
+date: 2013-12-29
+summary: ' '
 ---
 
 Ajouter [Phing] au dépendances de [Composer]
 
-```bash 
+```bash
 $ php composer.phar require --dev \
                     phing/phing:"*@stable"
-``` 
+```
 
 Créer à la racine du projet le fichier **build.xml** contenant par exemple pour tester une appli symfony
 
-```xml 
+```xml
 <?xml version="1.0"?>
 <project name="Example" default="test" basedir='.'>
     <target name="test"
         depends="test:phpunit, test:behat">
     </target>
     <target name="test:phpunit">
-        <exec command="./bin/phpunit -c app" 
-            passthru="true" 
+        <exec command="./bin/phpunit -c app"
+            passthru="true"
             checkreturn="true"/>
     </target>
     <target name="test:behat">
-        <exec command="./bin/behat --format=progress" 
-            passthru="true" 
+        <exec command="./bin/behat --format=progress"
+            passthru="true"
             checkreturn="true"/>
     </target>
 </project>
-``` 
+```
 
 Avec ce build, pour lancer les test unitaires & de comportement:
 
-```bash 
+```bash
 $ ./bin/phing test
-``` 
+```
 
 [Phing]: http://www.phing.info/
 [Composer]: http://getcomposer.org/

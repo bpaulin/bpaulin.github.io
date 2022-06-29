@@ -24,6 +24,25 @@ module.exports = {
   theme: '@vuepress/blog',
   themeConfig: {
     // Please head documentation to see the available options.
+    dateFormat: 'YYYY-MM-DD',
+    nav: [
+      {
+        text: 'Articles',
+        link: '/',
+      },
+      {
+        text: 'About',
+        link: '/about/',
+      },
+    ],
+    footer: {
+      contact: [
+        {
+          type: 'github',
+          link: 'https://github.com/bpaulin',
+        },
+      ],
+    },
   },
 
   /**

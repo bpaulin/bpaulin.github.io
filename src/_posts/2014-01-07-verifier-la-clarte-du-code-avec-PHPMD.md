@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      Vérifier la clarté du code avec PHPMD
-lang: fr
-categories: programmation
+title: Vérifier la clarté du code avec PHPMD
+date: 2014-01-07
+summary: ' '
 ---
 
 [PHP Mess Detector (PHPMD)][PHPMD] est littéralement un détecteur de bordel. Il analyse le code PHP pour détecter des _problèmes_ nuisant à la [Maintenabilité] d'une application, comme par exemple des variables ou méthodes déclarées mais pas utilisées, un nommage trop long ou trop court, les méthodes trop longues ou trop complexes, etc...
@@ -11,10 +10,10 @@ categories: programmation
 
 [PHPMD] est disponible via composer:
 
-```bash 
+```bash
 $ php composer.phar require --dev \
                     phpmd/phpmd:"*@stable"
-``` 
+```
 
 ### Utilisation
 
@@ -25,15 +24,15 @@ $ php composer.phar require --dev \
 
 Par exemple, pour vérifier le nommage et la longueur des méthodes d'une appli symfony et afficher le résultat dans le terminal:
 
-```bash 
+```bash
 $ ./bin/phpmd src/ text codesize,naming
-``` 
+```
 
 Il est possible de définir dans un fichier xml l'ensemble des règles à appliquer et même de surcharger certaines vérifications.
 
 Pour exemple, j'utilise ce fichier **app/phpmd_rules.xml** pour mes symfony. Il applique toutes les règles, fixe la longueur minimal des noms de variables à 2 caractères (pour signaler **$i** mais laisser passer le fameux **$em**) et fixe la taille maximale d'une classe à 20 méthodes.
 
-```xml 
+```xml
 <?xml version="1.0"?>
 <ruleset name="Bpaulin phpmd ruleset"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
@@ -61,13 +60,13 @@ Pour exemple, j'utilise ce fichier **app/phpmd_rules.xml** pour mes symfony. Il 
         </properties>
     </rule>
 </ruleset>
-``` 
+```
 
 Avec ce fichier, la vérification devient:
 
-```bash 
+```bash
 $ ./bin/phpmd src/ text app/phpmd_rules.xml
-``` 
+```
 
 [PHPMD]: http://phpmd.org/
 [Maintenabilité]: http://fr.wikipedia.org/wiki/Maintenabilit%C3%A9

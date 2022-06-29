@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      dotFiles are good, ansible is better
-lang:       en
-ref:        dotfiles-are-good-ansible-is-better
+title: dotFiles are good, ansible is better
+date: 2016-05-12
+summary: ' '
 ---
 
 On Linux, everything is configured with plain text files, even softwares witch provide a shiny configuration GUI.
@@ -25,7 +24,7 @@ My previous experiences with provisioning for vagrant were not a real success.
 
 I tried bash, the easiest one. It was OK, it did what I was asking. But after a while, scripts became huge and ugly. Scripting only a simple LAMP server results in a unreadable script.
 
-I tried puppet and chef. I spent too many hours to have a valid cookbook. OK, it worked but I didn't like it because I hadn't the feeling that I really understood it. Every few months, I told myself that I should retry. 
+I tried puppet and chef. I spent too many hours to have a valid cookbook. OK, it worked but I didn't like it because I hadn't the feeling that I really understood it. Every few months, I told myself that I should retry.
 
 
 Recently I had to play with ansible at work. This, I loved.

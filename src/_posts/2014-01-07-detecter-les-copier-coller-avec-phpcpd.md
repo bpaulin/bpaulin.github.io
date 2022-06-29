@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      Détecter les copier/coller avec phpcpd
-lang: fr
-categories: programmation
+title: Détecter les copier/coller avec phpcpd
+date: 2014-01-07
+summary: ' '
 ---
 
 [PHP Copy Paste Detector (PHPCPD)][phpcpd] detecte si les mêmes lignes de code sont à plusieurs endroits dans la source d'une application.
@@ -13,16 +12,16 @@ A l'origine d'un copier/coller de code, il y a une application mal pensée et ma
 
 [phpcpd] est disponible via composer:
 
-```bash 
+```bash
 $ php composer.phar require --dev \
                     sebastian/phpcpd:"*@stable"
-``` 
+```
 
 ### Utilisation
 
 Pour détecter les copier/coller dans les fichiers php ou twig d'une appli symfony:
 
-```bash 
+```bash
 $ ./bin/phpcpd --progress --names *.php,*.twig src/
 phpcpd 0.2.1-2-g413896f by Sebastian Bergmann.
 
@@ -31,7 +30,7 @@ phpcpd 0.2.1-2-g413896f by Sebastian Bergmann.
 0.00% duplicated lines out of 6620 total lines of code.
 
 Time: 148 ms, Memory: 6.50Mb
-``` 
+```
 
 [phpcpd]: https://github.com/sebastianbergmann/phpcpd
 [Maintenabilité]: http://fr.wikipedia.org/wiki/Maintenabilit%C3%A9

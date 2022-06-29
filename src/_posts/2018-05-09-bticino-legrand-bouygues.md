@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Config de myhomeserver1
-lang: fr
+date: 2018-05-09
+summary: ' '
 ---
 
 # Domotique, partie 1
@@ -13,12 +13,12 @@ De base, rien n'etait fourni/expliqué pour se lancer dans la domotique d'ou ce 
 Controller ses lumieres et ses stores depuis son telephone
 
 ## Avertissement pas du tout convivial
-Je garantis que ce tuto recapitule les operations que j'ai du faire pour que ca marche chez moi, et absolument rien d'autre.  
-Je ne suis pas electricien, ni installateur de systeme domotique.  
-Je ne garantis pas que la methode soit la bonne, la plus simple ou la plus propre.  
-Si ca ne fonctionne pas, je ne garantis pas de faire le support.  
-Si suivre ce tuto entraine une electrocution, un incendie ou une pénurie de nutella je ne suis pas responsable.  
-Si ce tuto fonctionne et entraine une surcharge pondérale suite a une inactivité sur canapé, je ne suis pas responsable (mais solidaire par contre)  
+Je garantis que ce tuto recapitule les operations que j'ai du faire pour que ca marche chez moi, et absolument rien d'autre.
+Je ne suis pas electricien, ni installateur de systeme domotique.
+Je ne garantis pas que la methode soit la bonne, la plus simple ou la plus propre.
+Si ca ne fonctionne pas, je ne garantis pas de faire le support.
+Si suivre ce tuto entraine une electrocution, un incendie ou une pénurie de nutella je ne suis pas responsable.
+Si ce tuto fonctionne et entraine une surcharge pondérale suite a une inactivité sur canapé, je ne suis pas responsable (mais solidaire par contre)
 OK pour tous? alors on redevient convivial et on attaque
 
 ## Pré requis

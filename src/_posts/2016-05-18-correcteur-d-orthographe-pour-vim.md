@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Correcteur d'orthographe pour Vim
-lang: fr
-ref: spellcheck-for-vim
+date: 2016-05-18
+summary: ' '
 ---
 
 Vim est bien, Vim est grand. C'est plus rapide d'apprendre à s'en servir que d'apprendre à s'en passer.

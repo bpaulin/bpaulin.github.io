@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      CV au format XMLRésumé
-lang: fr
-categories: vie
+title: CV au format XMLRésumé
+date: 2014-01-07
+summary: ' '
 ---
 
 ## Le problème
@@ -37,35 +36,35 @@ La [documentation] de XMLRésumé est extrêmement claire. Le [DTD] du XML est p
 
 ## Les outils
 
-* [xmllint]  (installé par le paquet [libxml2-utils](apt://libxml2-utils)) valide le xml source. 
-* [xsltproc]  (installé par le paquet [xsltproc](apt://xsltproc)) réalise la transformation en html et vcard. 
+* [xmllint]  (installé par le paquet [libxml2-utils](apt://libxml2-utils)) valide le xml source.
+* [xsltproc]  (installé par le paquet [xsltproc](apt://xsltproc)) réalise la transformation en html et vcard.
 * [Apache FOP]  (installé par le paquet [fop](apt://fop)) réalise la transformation en pdf.
 
 ## Les commandes
 
 Valider le xml:
 
-```bash 
-$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml 
-``` 
+```bash
+$ xmllint --noout --postvalid --dtdvalid http://xmlresume.sourceforge.net/dtd/resume.dtd cv/brunopaulin.xml
+```
 
 Générer le html:
 
-```bash 
-$ xsltproc --novalid -o jekyll/_includes/cv.html cv/cv-html.xsl cv/brunopaulin.xml 
-``` 
+```bash
+$ xsltproc --novalid -o jekyll/_includes/cv.html cv/cv-html.xsl cv/brunopaulin.xml
+```
 
 Générer la vcard:
 
-```bash 
-$ xsltproc --novalid -o jekyll/apropos/brunopaulin.vcf cv/cv-vcf.xsl cv/brunopaulin.xml 
-``` 
+```bash
+$ xsltproc --novalid -o jekyll/apropos/brunopaulin.vcf cv/cv-vcf.xsl cv/brunopaulin.xml
+```
 
 Générer le pdf:
 
-```bash 
+```bash
 $ fop -xml cv/brunopaulin.xml -xsl cv/cv-pdf.xsl -pdf jekyll/apropos/brunopaulin.pdf
-``` 
+```
 
 
 ## Le résultat

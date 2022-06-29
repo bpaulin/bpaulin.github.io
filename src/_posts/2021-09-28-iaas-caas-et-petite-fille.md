@@ -1,7 +1,7 @@
 ---
-layout: post
 title: IaaS/Caas et petite fille
-lang: fr
+date: 2021-09-28
+summary: ' '
 ---
 
 Bienvenue dans le nouvel épisode de votre série "les analogies toutes pétées du chauve"!

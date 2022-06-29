@@ -1,11 +1,10 @@
 ---
-layout:     post
-title:      REMOTE HOST IDENTIFICATION HAS CHANGED
-lang: fr
-categories: linux
+title: REMOTE HOST IDENTIFICATION HAS CHANGED
+date: 2010-05-07
+summary: ' '
 ---
 
-```sh 
+```bash
 $ ssh user@ipduserver
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
@@ -13,16 +12,16 @@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that the RSA host key has just been changed.
-``` 
+```
 
 Taper sur le poste client
 
-```sh 
+```bash
 $ ssh-keygen -R ipduserver
-``` 
+```
 
 Lancer la connexion ssh à nouveau
 
-```sh 
+```bash
 $ ssh user@ipduserver
-``` 
+```

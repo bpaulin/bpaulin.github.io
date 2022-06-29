@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      Tester une appli Symfony avec Behat
-lang: fr
-categories: programmation
+title: Tester une appli Symfony avec Behat
+date: 2013-12-28
+summary: ' '
 ---
 
 Une procédure fonctionnelle pour configurer [Behat] et Symfony, de la création du projet aux premiers scénarios.
@@ -56,7 +55,7 @@ default:
 
 Initialiser behat pour le bundle voulu
 
-```sh
+```bash
 $ ./bin/behat --init "@AcmeBehatBundle"
 ```
 

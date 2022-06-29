@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      Appliquer la norme PSR-2 au code PHP
-lang: fr
-categories: programmation
+title: Appliquer la norme PSR-2 au code PHP
+date: 2014-01-07
+summary: ' '
 ---
 
 Chaque développeur écrit son code avec ses propres habitudes d'indentation, de nommage, etc... ce qui nuit a la lisibilité du code par d'autres personens ayant d'autres habitudes.
@@ -14,7 +13,7 @@ La solution est d'adopter une norme commune. Peu importe la norme, du moment qu'
 Le [PHP Framework Interop Group] publie des normes reprises par beaucoup de projets. C'est par exemple le cas des [Standards Symfony] qui suivent la norme [PSR-2].
 
 Pas de long discours, mais un petit exemple tiré du site:
-```php 
+```php
 <?php
 namespace Vendor\Package;
 
@@ -40,27 +39,27 @@ class Foo extends Bar implements FooInterface
         // method body
     }
 }
-``` 
+```
 
 ### Controller son code
 
 [PHP_CodeSniffer] est disponible via composer:
-```bash 
+```bash
 $ php composer.phar require --dev \
                     squizlabs/php_codesniffer:"*@stable"
-``` 
+```
 
 Pour valider le code d'une appli symfony contre la norme [PSR-2]:
 
-```bash 
+```bash
 $ ./bin/phpcs -p --standard=PSR2 src/
-``` 
+```
 
 _Pour ajouter d'autres vérifications, notamment la présence des [DocBlocks] pour [phpDocumentor]_:
 
-```bash 
-$ ./bin/phpcs -p src/ 
-``` 
+```bash
+$ ./bin/phpcs -p src/
+```
 
 ### Corriger son code
 
@@ -68,27 +67,27 @@ $ ./bin/phpcs -p src/
 
 Pour le télécharger:
 
-```bash 
+```bash
 $ wget http://cs.sensiolabs.org/get/php-cs-fixer.phar
-``` 
+```
 
 Pour mettre à jour [php-cs-fixer]:
 
-```bash 
+```bash
 $ php php-cs-fixer.phar self-update
-``` 
+```
 
 Pour corriger le code d'une appli symfony pour suivre [PSR-2] plus quelques ajouts comme la suppression des _use_ inutiles par exemple:
 
-```bash 
+```bash
 $ php php-cs-fixer.phar fix src/
-``` 
+```
 
 _Pour corriger le code d'une appli symfony uniquement pour [PSR-2]:_
 
-```bash 
+```bash
 $ php php-cs-fixer.phar fix src/ --level=psr2
-``` 
+```
 
 [Standards Symfony]: http://symfony.com/doc/master/contributing/code/standards.html
 [PSR-2]: http://www.php-fig.org/psr/psr-2/

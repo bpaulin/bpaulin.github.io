@@ -1,8 +1,7 @@
 ---
-layout:     post
-title:      Souris Mad Catz R.A.T.5 sous linux
-lang: fr
-categories: linux
+title: Souris Mad Catz R.A.T.5 sous linux
+date: 2014-05-16
+summary: ' '
 ---
 
 ## Le problème
@@ -15,7 +14,7 @@ Ces bugs surviennent quel que soit le bureau utilisé (cinnamon, xfce, gnome3 ou
 Cette souris demande une déclaration spéciale au serveur X. J’ai commencé par modifier directement xorg.conf, mais je devais refaire l’opération après chaque mise à jour.
 Actuellement, ce qui marche chez moi est de créer le fichier **/etc/X11/xorg.conf.d/rat5.conf** contenant:
 
-```bash 
+```bash
 Section "InputClass"
     Identifier "Mad Catz R.A.T. 5"
     MatchProduct "Mad Catz Mad Catz R.A.T.5 Mouse"
@@ -25,6 +24,6 @@ Section "InputClass"
     Option "ZAxisMapping" "4 5 11 10"
     Option "AutoReleaseButtons" "13 14 15"
 EndSection
-``` 
+```
 
 Après redemarrage, tout fonctionne...
