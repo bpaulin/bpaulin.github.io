@@ -1,1 +1,0 @@
-Jekyll source for bpaulin.net
