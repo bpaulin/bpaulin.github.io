@@ -41,6 +41,10 @@ module.exports = {
           type: 'github',
           link: 'https://github.com/bpaulin',
         },
+        {
+          type: 'linkedin',
+          link: 'https://www.linkedin.com/in/bpaulin-devops',
+        },
       ],
     },
   },
