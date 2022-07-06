@@ -181,8 +181,7 @@ k3d cluster delete modern-toolbox-java  # Destruction
 
 Maintenant qu'on a quelque chose a deployer et quelque part où le déployer, il nous reste à définir comment on déploie.
 
-On parlera peut être plus tard de chart voir de helmfile mais on va commencer par un [deployment kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) simpliste. # la seul fioriture sera les probes pour que kubernetes nous remonte bien
-ajout deploy
+On parlera peut être plus tard de chart voir de helmfile mais on va commencer par un [deployment kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) simpliste.
 
 Au même niveau que notre dossier **app**, on crée le dossier **deploy** et un seul fichier: **manifests.yaml** qui décrit un pod simple sans replicas, n'ayant qu'un seul container issu de l'image construite précédemment.
 
@@ -237,7 +236,7 @@ Le deploy est aussi simple que le manifest kube avec un seul argument
 k8s_yaml('deploy/manifests.yaml')
 ```
 
-Tout est prêt, il n'y a plus qu'à lancer tilt et le lancer travailler
+Tout est prêt, il n'y a plus qu'à lancer tilt et le laisser travailler
 
 ```bash
 tilt up
@@ -250,7 +249,7 @@ tilt up
 # (ctrl-c) to exit
 ```
 
-omme indiqué dans le retour de tilt, on peut suivre les logs simplement en pressant ```c``` et pour les plus amoureux de l'UI une jolie interface nous attends sur [http://localhost:10350/](http://localhost:10350/)
+Comme indiqué dans le retour de tilt, on peut suivre les logs simplement en pressant ```c``` et pour les plus amoureux de l'UI une jolie interface nous attends sur [http://localhost:10350/](http://localhost:10350/)
 
 ## Résumé
 
