@@ -172,8 +172,8 @@ k3d cluster list
 La manipulation du cluster via terminal est intuitive
 
 ```bash
-k3d cluster stop modern-toolbox-java    # Démarrage
-k3d cluster start modern-toolbox-java   # Arrêt
+k3d cluster start modern-toolbox-java   # Démarrage
+k3d cluster stop modern-toolbox-java    # Arrêt
 k3d cluster delete modern-toolbox-java  # Destruction
 ```
 
