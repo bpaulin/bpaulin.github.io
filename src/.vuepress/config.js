@@ -34,6 +34,10 @@ module.exports = {
         text: 'About',
         link: '/about/',
       },
+      {
+        text: 'Resume',
+        link: '/resume/',
+      },
     ],
     footer: {
       contact: [
