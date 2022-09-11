@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         text: 'Resume',
-        link: '/resume/',
+        link: 'https://bpaulin.net/resume/',
       },
     ],
     footer: {
