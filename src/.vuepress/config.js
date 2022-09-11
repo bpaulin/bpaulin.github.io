@@ -33,11 +33,7 @@ module.exports = {
       {
         text: 'About',
         link: '/about/',
-      },
-      {
-        text: 'Resume',
-        link: 'https://bpaulin.net/resume/',
-      },
+      }
     ],
     footer: {
       contact: [
