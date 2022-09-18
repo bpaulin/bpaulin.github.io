@@ -1,6 +1,6 @@
 ---
 title: CI terraform
-date: 2022-09-10
+date: 2022-09-17
 summary: Même les outils de déploiements méritent une CI
 ---
 
