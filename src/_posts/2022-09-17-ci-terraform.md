@@ -173,7 +173,7 @@ docker run --rm -it \
 | 12  | `aws-eks-no-public-cluster-access`               | *CRITICAL* | _EKS Clusters should have the public access disabled_                      | `terraform-aws-modules/eks/aws/src/.terraform/modules/eks/main.tf:26`         | Public cluster access is enabled.                                        |
 | 13  | `aws-eks-no-public-cluster-access-to-cidr`       | *CRITICAL* | _EKS cluster should not have open CIDR range for public access_            | `terraform-aws-modules/eks/aws/src/.terraform/modules/eks/main.tf:27`         | Cluster allows access from a public CIDR: 0.0.0.0/0.                     |
 
-Le cluster est public, les secrets sont en clair, le logging n'est pas activé... sans maitriser aws, il va falloir faire l'effort de regler chque problème ou si on peut **vraiment** le justifier, annoter les tf pour exclure une remontée.
+Le cluster est public, les secrets sont en clair, le logging n'est pas activé... sans maitriser aws, il va falloir faire l'effort de regler chaque problème ou si on peut **vraiment** le justifier, annoter les tf pour exclure une remontée.
 
 Je suis surpris du nombre de failles trouvées, il y en a trop pour détailler la resolution ici. Je le ferai peut etre un jour (ahahah non, je vais passer sur sideproject #85379876 c'est plus probable).
 
