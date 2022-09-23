@@ -164,7 +164,7 @@ git commit -m "init deployment"
 
 ## Theme
 
-As explained in [their doc](https://jsonresume.org/themes/), there is a lot of theme available in [npm registry](https://www.npmjs.com/search?ranking=maintenance&q=jsonresume-theme). Adding a theme to my resume (link stack in my case) is a simple yarn dependency.
+As explained in [their doc](https://jsonresume.org/themes/), there is a lot of theme available in [npm registry](https://www.npmjs.com/search?ranking=maintenance&q=jsonresume-theme). Adding a theme to my resume is a simple yarn dependency.
 
 ```bash
 yarn add -D jsonresume-theme-stackoverflow
